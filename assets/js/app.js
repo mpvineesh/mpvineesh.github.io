@@ -49,6 +49,24 @@
 		templateUrl: 'views/skills.html'
 	  };
 	})
+	.directive('myAddress', function() {
+	  return {
+		restrict: 'E',
+		scope: {
+		  customerInfo: '=info'
+		},
+		templateUrl: 'views/my-address.html'
+	  };
+	})
+	.directive('education', function() {
+	  return {
+		restrict: 'E',
+		scope: {
+		  customerInfo: '=info'
+		},
+		templateUrl: 'views/education.html'
+	  };
+	})
 	.directive('credits', function() {
 	  return {
 		restrict: 'E',
@@ -81,3 +99,15 @@
     myApp.controller('contactController', function($scope) {
         $scope.message = 'Contact us! JK. This is just a demo.';
     });
+	
+	
+
+	function MainCntl($route, $routeParams, $location, $scope) {
+	  this.$route = $route;
+	  this.$location = $location;
+	  this.$routeParams = $routeParams;
+	  $scope.$on('$viewContentLoaded', function(){
+		 $("#overlay").hide();
+		$scope.msg= $route.current.templateUrl + ' is loaded !!';
+	  });
+	}
