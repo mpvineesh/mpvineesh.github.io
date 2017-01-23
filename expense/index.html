@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Expense Calculator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen"> 
+
+	<script  src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type="text/javascript">
+      // Your Client ID can be retrieved from your project in the Google
+      // Developer Console, https://console.developers.google.com
+      var CLIENT_ID = '1048199784974-oc4ie7biba4n75j8r5vf9n2h8idchppb.apps.googleusercontent.com';
+
+      var SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
+	  
+	  //var rowletter = ['A','B','C'];
+      /**
+       * Check if current user has authorized this application.
+       */
+      function checkAuth() {
+        gapi.auth.authorize(
+          {
+            'client_id': CLIENT_ID,
+            'scope': SCOPES.join(' '),
+            'immediate': true
+          }, handleAuthResult);
+      }
+
+      /**
+       * Handle response from authorization server.
+       *
+       * @param {Object} authResult Authorization result.
+       */
+      function handleAuthResult(authResult) {
+        var authorizeDiv = document.getElementById('authorize-div');
+        if (authResult && !authResult.error) {
+          // Hide auth UI, then load client library.
+          authorizeDiv.style.display = 'none';
+          loadSheetsApi();
+        } else {
+          // Show auth UI, allowing the user to initiate authorization by
+          // clicking authorize button.
+          authorizeDiv.style.display = 'inline';
+        }
+      }
+
+      /**
+       * Initiate auth flow in response to user clicking authorize button.
+       *
+       * @param {Event} event Button click event.
+       */
+      function handleAuthClick(event) {
+        gapi.auth.authorize(
+          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+          handleAuthResult);
+        return false;
+      }
+
+      /**
+       * Load Sheets API client library.
+       */
+      function loadSheetsApi() {
+        var discoveryUrl =
+            'https://sheets.googleapis.com/$discovery/rest?version=v4';
+        gapi.client.load(discoveryUrl).then(listMajors);
+      }
+
+      /**
+       * Print the names and majors of students in a sample spreadsheet:
+       * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+       */
+      function listMajors() {
+		 
+        gapi.client.sheets.spreadsheets.values.get({
+          spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
+          range: 'A2:C',
+        }).then(function(response) {
+          var range = response.result;
+		   //var rowCount= 0;
+		  $('#lastRow').val(range.values.length+1);
+          if (range.values.length > 0) {
+            appendPre('Item, Date:');
+            for (i = 0; i < range.values.length; i++) {
+              var row = range.values[i];
+			 // if(row[0]!='undefined')
+			  //rowCount++;
+              // Print columns A and E, which correspond to indices 0 and 4.
+			  // $('#myTable tbody').append('<tr class="child"><td>blahblah</td></tr>');
+			  data = '<tr><td>'+row[0]+'</td><td>'+row[1]+'</td><td>'+row[2]+'</td></tr>';
+              //appendPre(row[0] + ', ' + row[1]);
+			  $('.table').append(data);
+            }
+			console.log(range.values.length+1);
+			//$('#lastRow').val(rowCount);
+          } else {
+            appendPre('No data found.');
+          }
+        }, function(response) {
+          appendPre('Error: ' + response.result.error.message);
+        });
+		
+		
+		
+		
+		
+      }
+
+      /**
+       * Append a pre element to the body containing the given message
+       * as its text node.
+       *
+       * @param {string} message Text to be placed in pre element.
+       */
+      function appendPre(message) {
+        var pre = document.getElementById('output');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
+	
+	  function SubmitData(){
+		var date = $('#date').val();
+		var item = $('#item').val();
+		var amount = $('#amount').val();
+		
+		var Row = $('#lastRow').val();
+		Row=parseInt(Row)+1;
+		//console.log('Row'+Row);
+		col = 'A'+Row;
+		gapi.client.sheets.spreadsheets.values.update({
+			spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
+			range: col,
+			valueInputOption: 'USER_ENTERED',
+			values: [ [date] ]
+		}).then(function(response) {
+			console.log(response);
+		}, function(response) {
+          appendPre('Error: ' + response.result.error.message);
+        });
+		col = 'B'+Row;
+		gapi.client.sheets.spreadsheets.values.update({
+			spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
+			range: col,
+			valueInputOption: 'USER_ENTERED',
+			values: [ [item] ]
+		}).then(function(response) {
+			console.log(response);
+		}, function(response) {
+          appendPre('Error: ' + response.result.error.message);
+        });
+		col = 'C'+Row;
+		gapi.client.sheets.spreadsheets.values.update({
+			spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
+			range: col,
+			valueInputOption: 'USER_ENTERED',
+			values: [ [amount] ]
+		}).then(function(response) {
+			console.log(response);
+		}, function(response) {
+          appendPre('Error: ' + response.result.error.message);
+        });
+		
+	  }
+
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Add Data</h2>
+  <form>
+   <input type="hidden" name="lastRow" id="lastRow">
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="text" class="form-control" id="date" placeholder="Enter Date" readonly>
+    </div>
+    <div class="form-group">
+      <label for="item">Item:</label>
+      <input type="text" class="form-control" id="item" placeholder="Enter Item">
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="amount" class="form-control" id="amount" placeholder="Enter Amount">
+    </div>
+    <button type="submit" class="btn btn-default" onclick="SubmitData()">Submit</button>
+  </form>
+  <div id="authorize-div" style="display: none">
+      <span>Authorize access to Google Sheets API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+    <pre id="output" style="display:none"></pre>
+	
+	<table class="table table-inverse">
+	  <thead>
+		<tr>
+		  <th>Date</th>
+		  <th>Item</th>
+		  <th>Amount</th> 
+		</tr>
+	  </thead>
+	  <tbody class="tableData">
+		
+		
+	  </tbody>
+	</table>
+	
+	
+</div>
+
+</body>
+<script type="text/javascript">
+ 
+	$('#date').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+		format: 'yyyy-mm-dd'
+    });
+	//$('#date').val(new Date()); 
+</script>
+</html>
