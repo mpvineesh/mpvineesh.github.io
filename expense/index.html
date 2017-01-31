@@ -18,7 +18,7 @@
       var CLIENT_ID = '1048199784974-7cst4aojfi78nppbcgbffopkm9ga09sh.apps.googleusercontent.com';
 
       var SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
-	  
+		  
 	  //var rowletter = ['A','B','C'];
       /**
        * Check if current user has authorized this application.
@@ -31,7 +31,6 @@
             'immediate': true
           }, handleAuthResult);
       }
-
       /**
        * Handle response from authorization server.
        *
@@ -49,7 +48,6 @@
           authorizeDiv.style.display = 'inline';
         }
       }
-
       /**
        * Initiate auth flow in response to user clicking authorize button.
        *
@@ -61,7 +59,6 @@
           handleAuthResult);
         return false;
       }
-
       /**
        * Load Sheets API client library.
        */
@@ -70,7 +67,6 @@
             'https://sheets.googleapis.com/$discovery/rest?version=v4';
         gapi.client.load(discoveryUrl).then(listMajors);
       }
-
       /**
        * Print the names and majors of students in a sample spreadsheet:
        * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -79,23 +75,28 @@
 		 
         gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
-          range: 'A2:C',
+          range: 'A2:E',
         }).then(function(response) {
           var range = response.result;
 		   //var rowCount= 0;
 		  $('#lastRow').val(range.values.length+1);
           if (range.values.length > 0) {
             appendPre('Item, Date:');
+			var totalAmount = 0;
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
 			 // if(row[0]!='undefined')
 			  //rowCount++;
               // Print columns A and E, which correspond to indices 0 and 4.
 			  // $('#myTable tbody').append('<tr class="child"><td>blahblah</td></tr>');
+			  if(row[4] == 'Pending')
 			  data = '<tr><td>'+row[0]+'</td><td>'+row[1]+'</td><td>'+row[2]+'</td></tr>';
+			  totalAmount+=parseInt(row[2]);
               //appendPre(row[0] + ', ' + row[1]);
 			  $('.table').append(data);
-            }
+            } 
+			data = '<tr class="bold"><td colspan=2>Total</td><td>'+totalAmount+'</td></tr>';
+			 $('.table').append(data);
 			console.log(range.values.length+1);
 			//$('#lastRow').val(rowCount);
           } else {
@@ -110,7 +111,6 @@
 		
 		
       }
-
       /**
        * Append a pre element to the body containing the given message
        * as its text node.
@@ -127,46 +127,42 @@
 		var date = $('#date').val();
 		var item = $('#item').val();
 		var amount = $('#amount').val();
+		var method = $('#pm').val();
+		if(item=='Payment'){
+			var status = 'Paid';
+		}else{
+			var status = 'Pending';
+		}
+			
+		
+		var arrData = new Array();
+		arrData.push({value: date,ColLetter: 'A'});
+		arrData.push({value: item,ColLetter: 'B'});
+		arrData.push({value: amount,ColLetter: 'C'});
+		arrData.push({value: method,ColLetter: 'C'});
+		arrData.push({value: status,ColLetter: 'D'});
 		
 		var Row = $('#lastRow').val();
 		Row=parseInt(Row)+1;
-		//console.log('Row'+Row);
-		col = 'A'+Row;
-		gapi.client.sheets.spreadsheets.values.update({
-			spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
-			range: col,
-			valueInputOption: 'USER_ENTERED',
-			values: [ [date] ]
-		}).then(function(response) {
-			console.log(response);
-		}, function(response) {
-          appendPre('Error: ' + response.result.error.message);
-        });
-		col = 'B'+Row;
-		gapi.client.sheets.spreadsheets.values.update({
-			spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
-			range: col,
-			valueInputOption: 'USER_ENTERED',
-			values: [ [item] ]
-		}).then(function(response) {
-			console.log(response);
-		}, function(response) {
-          appendPre('Error: ' + response.result.error.message);
-        });
-		col = 'C'+Row;
-		gapi.client.sheets.spreadsheets.values.update({
-			spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
-			range: col,
-			valueInputOption: 'USER_ENTERED',
-			values: [ [amount] ]
-		}).then(function(response) {
-			console.log(response);
-		}, function(response) {
-          appendPre('Error: ' + response.result.error.message);
-        });
+		var len = arrData.length;
 		
-	  }
+		for (var i = 0; i < len; i++) {
+			col = arrData[i].ColLetter+Row;
+			console.log('Length'+col);
+			value = arrData[i].value;
+			gapi.client.sheets.spreadsheets.values.update({
+				spreadsheetId: '1Rmu0gNzQ_HaaWu6l0JgBDKXAOyZWFg3l6xf3mRTmW-A',
+				range: col,
+				valueInputOption: 'USER_ENTERED',
+				values: [ [value] ]
+			}).then(function(response) {
+				console.log(response);
+			}, function(response) {
+			  appendPre('Error: ' + response.result.error.message);
+			});
+		}
 
+	  }
     </script>
     <script src="https://apis.google.com/js/client.js?onload=checkAuth">
     </script>
@@ -174,7 +170,8 @@
 <body>
 
 <div class="container">
-  <h2>Add Data</h2>
+  <h2>Expense Manager</h2>
+  <hr style="width:100%;color:black;border-width:1px;border-color:black;">
 	<div id="authorize-div" style="display: none">
 		<span>Authorize access to Google Sheets API</span>
 		<!--Button for the user to click to initiate auth sequence -->
@@ -194,6 +191,14 @@
       <input type="text" class="form-control" id="item" placeholder="Enter Item">
     </div>
     <div class="form-group">
+      <label for="pm">Payment Method:</label>
+      <select class="form-control" id="pm">
+		<option value="Cash">Cash</option>
+		<option value="Sodexo">Sodexo</option>
+		<option value="Credit Card">Credit Card</option>
+	  </select>
+    </div>
+    <div class="form-group">
       <label for="amount">Amount:</label>
       <input type="amount" class="form-control" id="amount" placeholder="Enter Amount">
     </div>
@@ -206,7 +211,7 @@
 	  <thead>
 		<tr>
 		  <th>Date</th>
-		  <th>Item</th>
+		  <th>Item</th> 
 		  <th>Amount</th> 
 		</tr>
 	  </thead>
