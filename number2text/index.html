@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content=""> 
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+	<script  src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+    <link href="lib/starter-template.css" rel="stylesheet">
+	<style>
+	.text-line {
+		background-color: transparent;
+		outline: none;
+		outline-style: none;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: solid #968787 1px;
+		padding: 3px 10px;
+		margin-left:10px;
+		width: 160px;
+	}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('#number').on('keyup',function(){ 
+				var number = $('#number').val();
+				var text = convertToText(number);
+				$("#text").html(text);
+			
+			});
+			$("#number").keypress(function (e) {
+				 //if the letter is not digit then display error and don't type anything
+				if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+					//display error message
+					return false;
+				}
+				
+			 });
+		
+			var convertToText = function(number) {
+				var numTextArray = ['Zero','One','Two', 'Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen','Twenty'];
+				numTextArray[30] = 'Thirty';
+				numTextArray[40] = 'Fourty';
+				numTextArray[50] = 'Fifty';
+				numTextArray[60] = 'Sixty';
+				numTextArray[70] = 'Seventy';
+				numTextArray[80] = 'Eighty';
+				numTextArray[90] = 'Ninety';
+				numTextArray[100] = 'Hundred';
+				numTextArray[1000] = 'Thousand';
+				numTextArray[100000] = 'Lakh';
+				numTextArray[10000000] = 'Crore'; 
+				var Tens;
+				var Ones;
+				var Hundreds;
+				var numOfDigits = number.toString().length;
+				var numText = '';
+				if (number <= 20) { // terminal case
+					return numTextArray[number];
+				} else if(number <= 100) { // block to execute
+					Tens = parseInt(number/10)*10;
+					Ones = (number%10);  
+					k = (Ones > 0)? convertToText(Ones) : '';			 
+					return (numTextArray[Tens] +' '+ k);	 
+				} else if(number <= 1000){		
+					Hundreds = parseInt(number/100);
+					twoDigit =  number - (Hundreds)*100;
+					hText = (Hundreds > 1) ? numTextArray[Hundreds]+' Hundreds ' :numTextArray[Hundreds]+' Hundred ';
+					return ((twoDigit>0)?hText +'and ' + convertToText(twoDigit) : hText);		
+				}else if(number <= 100000){		
+					thousands = parseInt(number/1000);
+					threeDigit =  number - (thousands)*1000;		
+					tText = (thousands > 1) ? convertToText(thousands)+' Thousands ' :numTextArray[thousands]+' Thousand '; 
+					return ((threeDigit>0)?tText +'and ' + convertToText(threeDigit) : tText);			 
+				}else if(number < 10000000){		
+					Lakhs = parseInt(number/100000);
+					fiveDigit =  number - (Lakhs)*100000;
+					lText = (Lakhs > 1) ? convertToText(Lakhs)+' Lakhs ' :numTextArray[Lakhs]+' Lakh ';
+					return ((fiveDigit>0)?lText +'and ' + convertToText(fiveDigit) : lText);	
+						
+				}else if(number >= 10000000){		
+					Crores = parseInt(number/10000000);
+					remDigit =  number - (Crores)*10000000;
+					cText = (Crores > 1) ? convertToText(Crores)+' Crores ' :numTextArray[Crores]+' Crore ';
+					return ((remDigit>0)?cText +'and ' + convertToText(remDigit) : cText);	
+						
+				}
+			};
+		});
+		
+	</script>
+  </head>
+
+  <body>
+<!--
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Navbar</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" placeholder="Search" type="text">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+--->
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Enter Number : <input class="text-line" type="text" id="number"></h1>
+        <p class="lead"><h1><span id="text"></span></h1></p>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="lib/jquery-3.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="lib/tether.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="lib/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="lib/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
