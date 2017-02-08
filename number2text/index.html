@@ -79,23 +79,23 @@
 					Hundreds = parseInt(number/100);
 					twoDigit =  number - (Hundreds)*100;
 					hText = (Hundreds > 1) ? numTextArray[Hundreds]+' Hundreds ' :numTextArray[Hundreds]+' Hundred ';
-					return ((twoDigit>0)?hText +'and ' + convertToText(twoDigit) : hText);		
+					return ((twoDigit>0)?hText +' ' + convertToText(twoDigit) : hText);		
 				}else if(number <= 100000){		
 					thousands = parseInt(number/1000);
 					threeDigit =  number - (thousands)*1000;		
 					tText = (thousands > 1) ? convertToText(thousands)+' Thousands ' :numTextArray[thousands]+' Thousand '; 
-					return ((threeDigit>0)?tText +'and ' + convertToText(threeDigit) : tText);			 
+					return ((threeDigit>0)?tText +' ' + convertToText(threeDigit) : tText);			 
 				}else if(number < 10000000){		
 					Lakhs = parseInt(number/100000);
 					fiveDigit =  number - (Lakhs)*100000;
 					lText = (Lakhs > 1) ? convertToText(Lakhs)+' Lakhs ' :numTextArray[Lakhs]+' Lakh ';
-					return ((fiveDigit>0)?lText +'and ' + convertToText(fiveDigit) : lText);	
+					return ((fiveDigit>0)?lText +' ' + convertToText(fiveDigit) : lText);	
 						
 				}else if(number >= 10000000){		
 					Crores = parseInt(number/10000000);
 					remDigit =  number - (Crores)*10000000;
 					cText = (Crores > 1) ? convertToText(Crores)+' Crores ' :numTextArray[Crores]+' Crore ';
-					return ((remDigit>0)?cText +'and ' + convertToText(remDigit) : cText);	
+					return ((remDigit>0)?cText +' ' + convertToText(remDigit) : cText);	
 						
 				}
 			};
