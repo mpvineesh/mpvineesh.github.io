@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content=""> 
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Number to Text</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/bootstrap.css" rel="stylesheet">
@@ -33,7 +33,11 @@
 			$('#number').on('keyup',function(){ 
 				var number = $('#number').val();
 				var text = convertToText(number);
+				
 				$("#text").html(text);
+				if(number.length == 0){
+					$("#text").html('');
+				}
 			
 			});
 			$("#number").keypress(function (e) {
@@ -42,6 +46,7 @@
 					//display error message
 					return false;
 				}
+				
 				
 			 });
 		
