@@ -25,7 +25,7 @@
 		border-bottom: solid #968787 1px;
 		padding: 3px 10px;
 		margin-left:10px;
-		width: 240px;
+		width: 160px;
 	}
 	</style>
 	<script>
@@ -75,12 +75,12 @@
 					Ones = (number%10);  
 					k = (Ones > 0)? convertToText(Ones) : '';			 
 					return (numTextArray[Tens] +' '+ k);	 
-				} else if(number <= 1000){		
+				} else if(number < 1000){		
 					Hundreds = parseInt(number/100);
 					twoDigit =  number - (Hundreds)*100;
 					hText = (Hundreds > 1) ? numTextArray[Hundreds]+' Hundreds ' :numTextArray[Hundreds]+' Hundred ';
 					return ((twoDigit>0)?hText +' ' + convertToText(twoDigit) : hText);		
-				}else if(number <= 100000){		
+				}else if(number < 100000){		
 					thousands = parseInt(number/1000);
 					threeDigit =  number - (thousands)*1000;		
 					tText = (thousands > 1) ? convertToText(thousands)+' Thousands ' :numTextArray[thousands]+' Thousand '; 
@@ -142,8 +142,9 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Enter Number : <input class="text-line" type="text" id="number"></h1>
-        <p class="lead"><h1><span id="text"></span></h1></p>
+        <h2>Enter Number : <input class="text-line" type="text" id="number"></h2>
+		<hr style="width:100%">
+        <p class="lead"><h2><span id="text"></span></h2></p>
       </div>
 
     </div><!-- /.container -->
