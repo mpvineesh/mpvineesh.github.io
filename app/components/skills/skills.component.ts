@@ -6,9 +6,7 @@ import { ProfileService } from '../../services/index';
 @Component({
 	selector:'profile-skills',
     moduleId: module.id.toString(),
-    templateUrl: 'skills.component.html',
-    animations: [fadeInAnimation],
-    host: { '[@fadeInAnimation]': '' }
+    templateUrl: 'skills.component.html'  
 })
 
 export class SkillsComponent {

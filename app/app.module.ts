@@ -11,7 +11,6 @@ import { AboutComponent } from './components/about/index';
 import { SkillsComponent } from './components/skills/index';
 import { EducationComponent } from './components/education/index';
 import { ProjectsComponent } from './components/projects/index';
-//import { Github } from './components/github/index';
 import { ExperienceComponent } from './components/experience/index';
 import { GithubDirective } from './directives/github.directive';
 import { AppRoutingModule, routedComponents } from './app-routing.module';

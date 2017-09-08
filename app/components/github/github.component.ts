@@ -1,15 +1,11 @@
 import {Component, AfterViewInit, ElementRef} from '@angular/core';
-
-
-import { fadeInAnimation } from '../../_animations/index';
+ 
 import { ProfileService } from '../../services/index';
 
 @Component({
 	selector:'github-activity',
     moduleId: module.id.toString(),
-    templateUrl: 'github.component.html',
-    animations: [fadeInAnimation],
-    host: { '[@fadeInAnimation]': '' }
+    templateUrl: 'github.component.html'  
 })
 
 export class Github implements AfterViewInit {

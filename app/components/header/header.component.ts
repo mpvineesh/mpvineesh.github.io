@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-
-import { fadeInAnimation } from '../../_animations/index';
+ 
 import { ProfileService } from '../../services/index';
 
 @Component({
 	selector:'profile-header',
     moduleId: module.id.toString(),
-    templateUrl: 'header.component.html',
-    animations: [fadeInAnimation],
-    host: { '[@fadeInAnimation]': '' }
+    templateUrl: 'header.component.html' 
 })
 
 export class HeaderComponent {

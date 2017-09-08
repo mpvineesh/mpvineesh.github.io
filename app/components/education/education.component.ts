@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 
-import { fadeInAnimation } from '../../_animations/index';
 import { ProfileService } from '../../services/index';
 
 @Component({
 	selector:'profile-education',
     moduleId: module.id.toString(),
-    templateUrl: 'education.component.html',
-    animations: [fadeInAnimation],
-    host: { '[@fadeInAnimation]': '' }
+    templateUrl: 'education.component.html'
 })
 
 export class EducationComponent {
