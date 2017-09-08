@@ -1,0 +1,24 @@
+{
+"data" : [
+	{
+	"company" : "Sapient",
+    "designation": "Senior Software Developer",
+    "duration" :"May 2017 - Present",
+    "roles" :["Plan, coordinate and conduct multiple complex software engineering activities","Planning and developing project plan","Inspire, motivate and influence the team members","Manage the flow of day to day operations","Create and distribute reports to appropriate personal."]	
+    },
+	{
+	"company" : "Neologix",
+    "designation": "Project Lead",
+    "duration" :"May 2014 - July 2016",
+     "roles" :["Plan, coordinate and conduct multiple complex software engineering activities","Planning and developing project plan","Inspire, motivate and influence the team members","Manage the flow of day to day operations","Create and distribute reports to appropriate personal."]	
+    },
+	{
+	"company" : "Neologix",
+    "designation": "Software Developer",
+    "duration" :"June 2011 - April 2014",
+   "roles" :["Plan, coordinate and conduct multiple complex software engineering activities","Planning and developing project plan","Inspire, motivate and influence the team members","Manage the flow of day to day operations","Create and distribute reports to appropriate personal."]	
+    }
+	
+	]
+}
+

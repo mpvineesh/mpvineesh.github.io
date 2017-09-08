@@ -1,0 +1,20 @@
+{
+"data" : 
+	{
+		"name" : "Testing",
+        "email": "vneesh@gmail.com",
+        "designation" :"Testing",
+        "DOB" : "31-12-1989",
+		"company" : "Sapient",
+        "phone": "9567723832",
+        "location" :"Bangalore, IN",
+        "website" : "mpvineesh.github.io",
+        "image" : "assets/images/profile1.png",
+        "twitter" : "",
+        "gplus" : "",
+        "linkedin" : "",
+        "stackoverflow" : "",
+        "github" : ""
+			
+	}
+}

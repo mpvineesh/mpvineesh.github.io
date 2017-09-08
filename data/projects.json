@@ -1,0 +1,35 @@
+{
+"data" : [
+	{
+	"title" : "Priority Pass",
+    "summary": "Priority Pass is providing frequent travelers with independent airport lounge access worldwide. Millions of Members across more than 130 countries are enjoying texperience envisaged by priority pass over two decades ago. Priority Pass has three different membership plans to suit all types of traveler - Standard, Standard Plus and Prestige.",
+    "technologies" :"Coldfusion",
+    "teamSize" :"20",
+    "duration" :"May 2017 - Present",
+    "role" :"Backend Developer",
+    "company" :"Sapient",
+	"responsibilities":"Create and estimate stories/tasks, Development of new modules/features as per client request"
+    },
+	{
+	"title" : "Assetnation",
+    "summary": "EquipmentOne is a secure online auction marketplace operated by Ritchie Bros., the world's largest seller of used equipment and trucks. EquipmentOne is a no-games, hassle-free way to buy and sell used equipment, trucks and materials online. Buyers can browse listings, place bids and negotiate safely online, knowing they are backed by EquipmentOne's Total Buyer Protection. Sellers can easily list items for sale, with detailed descriptions and unlimited photos that attract serious bids.",
+    "technologies" :"Java, Spring, REST APIs, Angular JS, Railo/Lucee, SQL Server, HTML, Javascript, Ajax, JQuery,Coldbox",
+    "teamSize" :"40",
+    "duration" :"July 2016",
+    "role" :"System Analyst",
+    "company" :"Neologix",
+	"responsibilities":"Create and estimate stories/tasks, Development of new modules/features as per client request"
+    },
+	{
+	"title" : "Lumens",
+    "summary": "An E-Learning as well as E-Commerce site now versioning at 7.2 primarily developed by Augusoft Inc ,USA. The site is rich with its features like reports, Class Course Management, Financial management, online payment methods etc. More than 4 versions are now in market. About 200 Universities all over USA is using this web application for their whole administration. Payment gateways including USA Epay, Touchnet, Moneris, WV Epay , Cashnet and Authorize.net are integrated for this application. Still developments for future versions are going on",
+    "technologies" :"Java, Spring, REST APIs, Angular JS, Railo/Lucee, SQL Server, HTML, Javascript, Ajax, JQuery,Coldbox",
+    "teamSize" :"40",
+    "duration" :"July 2016",
+    "role" :"Senior Software Developer, Team Lead",
+    "company" :"Neologix",
+	"responsibilities":"Development of new modules/features as per client request, Maintenance and bug fixing, Code base handling."
+    }
+	]
+}
+

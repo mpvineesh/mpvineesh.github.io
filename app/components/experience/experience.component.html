@@ -1,0 +1,16 @@
+<section class="experience section">
+	<div class="section-inner">
+		<h2 class="heading">Work Experience</h2>
+		<div class="content">
+			
+			<div *ngFor="let exp of experience" class="item">
+				<h3 class="title">{{exp.designation}}- <span class="place"><a href="#">{{exp.company}}</a></span> <span class="year">({{exp.duration}})</span></h3>
+				<p>
+					<span  *ngFor="let role of exp.roles">
+					• {{role}}
+					</span>
+				</p>
+			</div><!--//item-->
+		</div><!--//content-->  
+	</div><!--//section-inner-->                 
+</section><!--//section-->

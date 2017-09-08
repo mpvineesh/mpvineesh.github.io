@@ -1,0 +1,16 @@
+{
+"data" : [
+	{
+	"tarpName" : "Trap Name 1",
+        "component": "component 1",
+        "severity" :"1",
+        "dateTime" : "01-02-2020" 
+	},
+	{
+	"tarpName" : "Trap Name 2",
+        "component": "component 2",
+        "severity" :"2",
+        "dateTime" : "02-02-2020" 
+	}
+	]
+}

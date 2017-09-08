@@ -1,0 +1,21 @@
+{
+"data" : [
+	{
+	"degree" : "Bachelor in Technology",
+    "school": "CUSAT",
+    "duration" :"2007-2011"
+    },
+	{
+	"degree" : "Plust Two",
+    "school": "GHSS Chayoth",
+    "duration" :"2005-2007"
+    },
+	{
+	"degree" : "10th",
+    "school": "GHSS Chayoth",
+    "duration" :"1995-2005"
+    }
+	
+	]
+}
+

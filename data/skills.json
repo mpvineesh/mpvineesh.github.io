@@ -1,0 +1,44 @@
+{
+"data" :{
+
+	"summary":"I have project experience in Coldfusion, MSSQL Server, Javascript, jQuery, CSS etc. 5 years of experiencein web development",
+	"skills":
+	 [
+		{
+		"name" : "Java",
+		"levellevel": "Beginner",
+		"percentage" :"20"
+		},
+		{
+		"name" : "Coldfusion",
+		"level": "Expert",
+		"percentage" :"70"
+		},
+		{
+		"name" : "Angular 2/4",
+		"level": "Intermediate",
+		"percentage" :"60"
+		},
+		{
+		"name" : "Javascript/JQuery",
+		"level": "Expert",
+		"percentage" :"60"
+		},
+		{
+		"name" : "CSS3",
+		"level": "Intermediate",
+		"percentage" :"45"
+		},
+		{
+		"name" : "HTML5",
+		"level": "Intermediate",
+		"percentage" :"45"
+		},
+		{
+		"name" : "SQL",
+		"level": "Intermediate",
+		"percentage" :"55"
+		}
+	]
+	}
+}
