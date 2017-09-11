@@ -1,29 +1,29 @@
 {
 "data" :{
 
-	"summary":"I have project experience in Coldfusion, MSSQL Server, Javascript, jQuery, CSS etc. 5 years of experiencein web development",
+	"summary":"I have project experience in Coldfusion, MSSQL Server, Javascript,Angular 2/4, jQuery, CSS etc. 5 years of experiencein web development",
 	"skills":
 	 [
-		{
-		"name" : "Java",
-		"levellevel": "Beginner",
-		"percentage" :"20"
-		},
 		{
 		"name" : "Coldfusion",
 		"level": "Expert",
 		"percentage" :"70"
 		},
+		 {
+		"name" : "Javascript/JQuery",
+		"level": "Expert",
+		"percentage" :"60"
+		},		
 		{
 		"name" : "Angular 2/4",
 		"level": "Intermediate",
 		"percentage" :"60"
 		},
 		{
-		"name" : "Javascript/JQuery",
-		"level": "Expert",
-		"percentage" :"60"
-		},
+		"name" : "Java",
+		"levellevel": "Beginner",
+		"percentage" :"20"
+		},		
 		{
 		"name" : "CSS3",
 		"level": "Intermediate",
@@ -38,6 +38,16 @@
 		"name" : "SQL",
 		"level": "Intermediate",
 		"percentage" :"55"
+		},
+		{
+		"name" : "Node/MongoDB/Express",
+		"level": "Beginner",
+		"percentage" :"30"
+		},
+		{
+		"name" : "Github/Tortoise SVN",
+		"level": "Intermediate",
+		"percentage" :"60"
 		}
 	]
 	}
