@@ -1,0 +1,62 @@
+﻿ <div class="container rules" style="font-size:14px;">
+						<div class="row">
+								<div class="col-md-12">
+								    <h3>Built In Validation Rules</h3>
+									<div class="col-md-6">
+										<pre><code class="xml">&lt;rule type="required"/&gt;
+&lt;rule type="boolean"/&gt;
+&lt;rule type="collectionSize"&gt;
+	&lt;param name="min" value="1" /&gt;
+	&lt;param name="max" value="3" /&gt;
+&lt;/rule&gt;
+&lt;rule type="custom"&gt;
+	&lt;param name="methodName" value="checkDuplicateNickname" /&gt;
+	&lt;param name="remoteURL" value="checkDuplicateNickname.cfm" /&gt;
+&lt;/rule&gt;
+&lt;rule type="date" /&gt;
+&lt;rule type="date"&gt;
+	&lt;param name="from" value="2010-01-01" /&gt;
+	&lt;param name="until" value="2010-12-31" /&gt;
+&lt;/rule&gt;
+&lt;rule type="doesNotContainOtherProperties"&gt;
+	&lt;param name="propertyNames" value="firstName,lastName" /&gt;
+&lt;/rule&gt;
+&lt;rule type="email" /&gt;
+&lt;rule type="equalTo"&gt;
+	&lt;param name="comparePropertyName" value="anotherProperty" /&gt;
+&lt;/rule&gt;
+&lt;rule type="false" /&gt;
+&lt;rule type="futureDate"&gt;
+	&lt;param name="after" value="2010-01-01" /&gt;
+&lt;/rule&gt;</code></pre>	 														
+								  </div>
+								  <div class="col-md-6">
+<pre><code class="xml">
+&lt;rule type="inList"&gt;
+	&lt;param name="list" value="John,Paul,George" /&gt;
+&lt;/rule&gt;
+&lt;rule type="integer" /&gt;
+&lt;rule type="isValidObject"&gt;
+	&lt;param name="objectType" value="user" /&gt;
+	&lt;param name="context" value="register" /&gt;
+&lt;/rule&gt;
+&lt;rule type="max"&gt;
+	&lt;param name="max" value="5" /&gt;
+&lt;/rule&gt;
+&lt;rule type="maxLength"&gt;
+	&lt;param name="maxLength" value="5" /&gt;
+&lt;/rule&gt;
+&lt;rule type="min"&gt;
+	&lt;param name="min" value="5" /&gt;
+&lt;/rule&gt;
+&lt;rule type="minLength"&gt;
+	&lt;param name="minLength" value="5" /&gt;
+&lt;/rule&gt;
+&lt;rule type="noHTML" /&gt;
+&lt;rule type="notInList"&gt;
+	&lt;param name="list" value="John,Paul,George" /&gt;
+&lt;/rule&gt;</code></pre>
+								  </div>
+								</div>
+							  
+						</div>

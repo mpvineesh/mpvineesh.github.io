@@ -1,0 +1,33 @@
+﻿ <div class="container" style="">
+						<div class="row">
+								<div class="col-md-12">
+								  <h3>Using the Custom Validation Type</h3>
+									
+								  <p class="content-title">Defining a Custom Rule
+												<pre><code class="xml">&lt;property name="userName"&gt;
+	&lt;rule type="custom" failureMessage="That UserName is already taken. Please try a different one."&gt;
+		&lt;param name="methodname" value="validateDuplicateUserName" /&gt;
+		&lt;param name="remoteURL" value="validateDuplicateUserName.cfm" /&gt;
+	&lt;/rule&gt;
+&lt;/property&gt;</code></pre>
+											 
+									</p> 
+									<p class="content-title"> 
+												Instantiate the ValidateThis.cfc facade object with configStruct												
+									</p> 
+									<p class="content-title"> 
+												definitionPath points to the folder into which you placed your Rules Definition File
+												
+									</p> 
+									<p class="content-title"> Server Side validation
+											<pre><code class="xml">&lt;cfset Result = application.ValidateThis.validate(myObject) /&gt;</code></pre> 
+									</p>
+								 	<p class="content-title"> Client Side Validation
+											<pre><code class="xml">&lt;cfset theScript = application.ValidateThis.getValidationScript(theObject=myObject) /&gt;
+&lt;cfhtmlhead text="#theScript#" /&gt;</code></pre> 
+									</p>
+								</div>
+							
+							  </div>
+							  
+						</div>

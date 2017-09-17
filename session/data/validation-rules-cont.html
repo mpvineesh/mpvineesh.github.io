@@ -1,0 +1,33 @@
+﻿ <div class="container rules" style="font-size:14px;">
+						<div class="row">
+								<div class="col-md-12">
+								    <h3>Built In Validation Rules</h3>
+									<div class="col-md-8">
+										<pre><code class="xml">&lt;rule type="numeric" /&gt;
+&lt;rule type="pastDate"&gt;
+	&lt;param name="before" value="2010-12-31" /&gt;
+&lt;/rule&gt;
+&lt;rule type="range"&gt;
+	&lt;param name="min" value="5" /&gt;
+	&lt;param name="max" value="10" /&gt;
+&lt;/rule&gt;
+&lt;rule type="rangeLength"&gt;
+	&lt;param name="minLength" value="5" /&gt;
+	&lt;param name="maxLength" value="10" /&gt;
+&lt;/rule&gt;
+&lt;rule type="regex"&gt;
+	&lt;param name="regex" value="^(Dr|Prof|Mr|Mrs|Ms|Miss)(\.)?$" /&gt;
+&lt;/rule&gt;
+&lt;rule type="time" /&gt;
+&lt;rule type="true" /&gt;
+&lt;rule type="url" /&gt;
+&lt;rule type="expression" failureMessage="Foo is not equal to Bar"&gt;
+	&lt;param name="expression" value="getFoo() eq getBar()" /&gt;
+&lt;/rule&gt;</code></pre>	 														
+								  </div>
+								  <div class="col-md-4">
+ 
+								  </div>
+								</div>
+							  
+						</div>

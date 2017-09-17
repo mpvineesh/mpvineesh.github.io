@@ -1,0 +1,17 @@
+﻿ <div class="container" style="">
+	<div class="row">
+			<div class="col-md-12">
+				<h3>Specifying the objectType on a Method Call</h3>
+				<p class="content-title"> Passing in the objectType Argument
+					<pre><code class="xml">&lt;cfset Result = application.ValidateThis.validate(theObject=myObject,objectType='User')&gt;</code></pre>			</p> 
+				<p class="content-title">Allowing the Framework to Determine the objectType
+				<pre><code class="xml">&lt;cffunction name="getObjectType" access="public" output="false" returntype="any"&gt;
+	&lt;cfreturn "myUser" /&gt;
+&lt;/cffunction>&gt;</code></pre>	
+				</p> 
+				<p class="content-title">Creating rule definition file in same name as object name
+				<pre><code class="xml">&lt;cfset Result = application.ValidateThis.validate(theObject=User)&gt;</code></pre>	
+				</p> 
+			</div>
+		  </div>
+</div>

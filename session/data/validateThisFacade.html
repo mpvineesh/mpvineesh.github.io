@@ -1,0 +1,20 @@
+﻿ <div class="container" style="">
+	<div class="row">
+			<div class="col-md-12">
+				<h3>ValidateThis Facade Object-validateThis.cfc</h3>
+				<p class="content-title">The ValidateThis Facade Object is an object that you create in your application code, and which you subsequently use to interact with the framework. It is a cfc named ValidateThis.cfc, which resides in the root of the ValidateThis folder.
+					 
+												<pre><code class="xml">&lt;cfset ValidateThisConfig = {definitionPath="/model/"} /&gt;
+&lt;cfset application.ValidateThis = createObject("component","ValidateThis.ValidateThis").init(ValidateThisConfig) /&gt;</code></pre>				
+				</p> 
+				<p class="content-title">The validate() Method
+				<pre><code class="xml">&lt;cfset theScript = application.ValidateThis.getValidationScript(objectType='User',context='Register') /&gt;
+&lt;cfhtmlhead text="#theScript#"  /&gt;</code></pre>
+				</p> 
+				<p class="content-title"> getValidationScript() - return JavaScript code for client-side validations.
+				<pre><code class="xml">&lt;cfset theFields = application.ValidateThis.getRequiredFields(objectType='User',context='Register') &gt;</code></pre></p> 
+				<p class="content-title">addRule method is used to dynamically add validation rules for an object.</p> 
+				<p class="content-title"> The newResult() method returns a Result object.</p>
+			</div>
+		  </div>
+</div>
