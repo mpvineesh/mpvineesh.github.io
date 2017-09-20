@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 @Injectable()
 export class ProfileService {
 	private APIUrl = 'http://mpvineesh.github.io/data/';
-	//private APIUrl = 'http://my.local/angular/my-profile/data/';
+	//private APIUrl = 'http://my.local/angular/mpvineesh.github.io/data/';
 	constructor(private http: Http) { 
 	}
      

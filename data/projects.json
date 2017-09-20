@@ -29,6 +29,16 @@
     "role" :"Senior Software Developer, Team Lead",
     "company" :"Neologix",
 	"responsibilities":"Development of new modules/features as per client request, Maintenance and bug fixing, Code base handling."
+    },
+	{
+	"title" : "Kada.in",
+    "summary": "Kada Online Private Limited is Kerala’s first and largest online grocery store. KADA was founded in 2012 and currently caters to the entire city of Trivandrum. KADA focuses on providing its services to TIER 2 and TIER 3 cities in South India. Kada.in has web, ios and android platforms",
+    "technologies" :"Java,Android, PHP, MySql, JQuery, Javascript",
+    "teamSize" :"2",
+    "duration" :"July 2016",
+    "role" :"Senior Software Developer, Team Lead",
+    "company" :"Neologix",
+	"responsibilities":"Development of new modules/features as per client request, Maintenance and bug fixing, Code base handling."
     }
 	]
 }

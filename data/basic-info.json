@@ -7,14 +7,37 @@
         "DOB" : "31-12-1989",
 		"company" : "Sapient",
         "phone": "9567723832",
-        "location" :"Bangalore, IN",
+        "location" :" Bangalore, IN",
         "website" : "mpvineesh.github.io",
         "image" : "assets/images/profile.png",
-        "twitter" : "",
-        "gplus" : "",
-        "linkedin" : "",
-        "stackoverflow" : "",
-        "github" : ""
+		"profile":[
+				 {
+					"link":"https://twitter.com/mpvineesh",
+					"icon":"twitter",
+					"title":"Twitter"
+				 },
+				 {
+					"link":"https://plus.google.com/+VineeshMP",
+					"icon":"google-plus",
+					"title":"Google Plus"
+				 },
+				 {
+					"link":"https://www.linkedin.com/in/vineeshmp/",
+					"icon":"linkedin",
+					"title":"LinkedIn"
+				 },
+				 {
+					"link":"https://stackoverflow.com/users/1856338/vineesh",
+					"icon":"stack-overflow",
+					"title":"Stackoverflow"
+				 },
+				 {
+					"link":"https://github.com/mpvineesh",
+					"icon":"github",
+					"title":"Github"
+				 }
+		]
+       
 			
 	}
 }

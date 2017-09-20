@@ -5,11 +5,7 @@
                 <h1 class="name">{{basicInfo.name}}</h1>
                 <h2 class="desc">{{basicInfo.designation}}</h2>   
                 <ul class="social list-inline">
-                    <li><a href="{{basicInfo.twitter}}"><i class="fa fa-twitter"></i></a></li>                   
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github-alt"></i></a></li>                  
-                    <li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li>                 
+                    <li *ngFor="let profile of basicInfo.profile" ><a href="{{profile.link}}" target="_blank"><i class="fa fa-{{profile.icon}}"></i></a></li>          
                 </ul> 
             </div><!--//profile-->
             <!--<a class="btn btn-cta-primary pull-right" href="http://themes.3rdwavemedia.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>-->              
