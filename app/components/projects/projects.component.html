@@ -5,6 +5,9 @@
 			<div *ngFor="let project of projects" 	class="item">
 				<h3 class="title"><a href="#">{{project.title}}</a></h3>
 				<p class="summary">{{project.summary}}.</p>
+				<p class="tech">
+					<span class="label label-default" *ngFor="let tech of project.technologies">{{tech}}</span>
+				</p>
 				<p><a class="more-link" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank" ></a></p>
 			</div><!--//item-->
 						
