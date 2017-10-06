@@ -32,9 +32,10 @@
     background-repeat: no-repeat;
     background-position: center center; 
 	background-size: 56px;
+	position:absolute;
 }
 .make-disable{
-		background-color:#443b3b;
+		background-color:#347284;
 }
 .disabled{
 	background-color:black;
@@ -43,3 +44,4 @@
 	margin-top:10%;
 
 }
+ul.ins {list-style-type: circle;}
