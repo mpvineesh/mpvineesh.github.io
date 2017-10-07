@@ -8,7 +8,7 @@
 	cursor:pointer;
 }
 .game-container{
-	width:480px;
+	width:420px;
 	margin-left: auto; 
     margin-right: auto; 
 }
@@ -45,3 +45,19 @@
 
 }
 ul.ins {list-style-type: circle;}
+.highlight{
+	border:1px solid red;
+}
+#error-msg{
+	width:400px;
+	text-align:center;
+	margin:auto;
+	margin-top:4px;
+}
+.alert{
+	
+	padding: 4px 4px;
+}
+#result-text{	
+	text-align:center;	
+}

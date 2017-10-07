@@ -61,7 +61,8 @@ $(document).ready(function() {
             d = pl2.split(",");
             var x = d[0];
             var y = d[1];
-
+			$(".square").removeClass("highlight");
+			$(this).addClass("highlight");
             gameState[x][y] = 0;
 
             var d = $(this).attr("id");
@@ -101,6 +102,7 @@ $(document).ready(function() {
 	
 		
     $("#done").on("click", function() {
+			$(".square").removeClass("highlight");
         var p2 = $(".player1").attr('data');
         d = p2.split(",");
         var px = d[0];
@@ -113,11 +115,15 @@ $(document).ready(function() {
         });
         var squaresToDisable = $(".make-disable");
         if ($(".player1").attr('data') == $(".player1").attr('prev-data')) {
-            alert('Move your piece first');
+			highlight($(".player1"));
+			$("#error").html("Move your piece first");
+			$("#error-msg").fadeIn("slow").delay(5000).fadeOut("slow");
+            //alert('Move your piece first');
             return false;
         }
-        if (squaresToDisable.length != 2) {
-            alert('Select 2 squares to empty');
+        if (squaresToDisable.length != 2) { 
+			$("#error").html("Select 2 squares to remove");
+			$("#error-msg").fadeIn("slow").delay(5000).fadeOut("slow");
             return false;
         } else {
             squaresToDisable.each(function(el) {
@@ -175,7 +181,7 @@ $(document).ready(function() {
 
     $(".square").on("click", function() {
         var count = $(".make-disable").length;
-        if ($(this).hasClass("player")) {
+        if ($(this).find('.player').length == 1) {
             return false;
         }
         if ($(this).hasClass("make-disable")) {
@@ -209,6 +215,7 @@ function processStep(gameState,nextTurn,player1,player2){
             left: left + 'px',
             top: top + 'px'
         });
+		$(player1).appendTo($("#" + target));
         var pos1 = "sq" + nextTurn.pos1.x + "" + nextTurn.pos1.y;
         var pos2 = "sq" + nextTurn.pos2.x + "" + nextTurn.pos2.y;
         gameState[nextTurn.next.x][nextTurn.next.y] = 2;
@@ -250,7 +257,8 @@ function checkGameStatus(state, x, y, player) {
     var neighbours = findEmptyNeighbours(x, y, state);
     if (neighbours.length == 0) {
         //$("#result").html("Player "+player+" Won");
-        $("#result-text").html("Player " + player + " Won");
+		var p = "<img src='lib/player"+player+".png' width='64'>";
+        $("#result-text").html("Player " + p + " Won");
         $('#myModal').modal('show');
     }
 }
@@ -340,6 +348,20 @@ function Position(x, y) {
 }
 
 
+function highlight(el){
+	var cnt = 0;
+	$this = $(el);
+	var timer = setInterval(function () {
+	cnt++
+	if (cnt == 8) {
+		$this.css('border', '0px solid');
+			clearInterval(timer);
+		} else {
+			cnt % 2 == 1 ? $this.css('border', '6px solid red') : $this.css('border', '0px solid');
+		}
+	}, 500);
+	
+}
 
 
 function robotPlay(initialState, player) {
