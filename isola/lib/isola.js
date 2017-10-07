@@ -346,7 +346,13 @@ function Position(x, y) {
     this.neighboursCount = 0;
     //this.relativeDistance = 0;
 }
-
+function getPlayerPosition(player){
+	    var pos = $(".player"+player).attr('data');
+        pos = pos.split(",");
+        var x = pos[0];
+        var y = pos[1];
+		return new Position(x,y);		
+}
 
 function highlight(el){
 	var cnt = 0;
@@ -394,12 +400,14 @@ function robotPlay(initialState, player) {
     neighbours.sort(function(a, b) {
         return a.neighboursCount - b.neighboursCount;
     });
-
+	
     //console.log(neighbours);
     var bestMatch = neighbours[neighbours.length - 1];
     var bestMatches = neighbours.filter(function(pos) {
         return pos.neighboursCount == bestMatch.neighboursCount;
     });
+	
+	
     /*bestMatches.sort(function (a, b) {
 		return a.relativeDistance - b.relativeDistance;
 	});*/
@@ -419,24 +427,52 @@ function robotPlay(initialState, player) {
         return a.neighboursCount - b.neighboursCount;
     });
 
-    //Write code here
+	
+	//Logic to find the best match squares
+	var position = getPlayerPosition(player);
+	var OPX = position.x < size/2 ? 'G' :'L';
+	var OPY = position.xy< size/2 ? 'G' :'L';
+	
+	
+	/*var test = [];
+	console.log('opx:'+OPX+',opy:'+OPY)
+	for(var k =0;k<neighbours.length;k++){
+		 el = neighbours[k];
+        if(OPX == 'G'){
+			if(el.x >= position.x) 
+				test.push(el)
+			continue;
+		}else{
+			if(el.x <= position.x) 
+				test.push(el)
+			continue;
+		}
+		  if(OPY == 'G'){
+			if(el.y >= position.y) 
+				test.push(el)
+			continue;
+		}else{
+			if(el.y <= position.y) 
+				test.push(el)
+			continue;
+		}
+    }
+	if(test.length >1){
+		neighbours = test;
+		console.log('test')
+		console.log(test)
+	}
+	*/
     //console.log(emptySquares);
     var result = {};
     result.next = next;
-    // console.log(""+next.x+" "+next.y+"");
     if (neighbours.length > 1) {
-        //console.log(""+neighbours[neighbours.length-1].x+" "+neighbours[neighbours.length-1].y+"");
-        //  console.log(""+neighbours[neighbours.length-2].x+" "+neighbours[neighbours.length-2].y+"");
         result.pos1 = neighbours[neighbours.length - 1];
         result.pos2 = neighbours[neighbours.length - 2];
     } else {
-		console.log('neighbours');
-		console.log(neighbours);
         result.pos1 = neighbours[0];
         var randomSquare = findRandomSquare(new Position(neighbours[0].x, neighbours[0].y), new Position(next.x, next.y), initialState, size);
         result.pos2 = randomSquare;
-        //console.log(""+neighbours[0].x+" "+neighbours[0].y+"");
-        // console.log(""+randomSquare.x+" "+randomSquare.y+"");
     }
     return result;
 

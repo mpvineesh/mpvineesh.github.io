@@ -46,7 +46,7 @@
 }
 ul.ins {list-style-type: circle;}
 .highlight{
-	border:1px solid red;
+	border:2px solid #39FF14;
 }
 #error-msg{
 	width:400px;
