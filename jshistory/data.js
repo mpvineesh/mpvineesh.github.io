@@ -1,0 +1,114 @@
+{
+   "technology":{
+      "name":"Javascript",
+      "type":"Client Side Scripting"
+   },
+   "versions":[
+      {
+         "name":"ECMAScript 1",
+         "releaseDate":"01/01/1997",
+         "releaseYear":"1997",
+		 "features":[""],
+		 "references":"",
+         "changes":{
+            "storageLocationCode":null,
+            "storageState":"",
+            "storageCountry":"NL",
+            "storageZipcode":"",
+            "storageEmail":"eew@dkkdk.com",
+            "storagePhone":"+31.765.242.650"
+         }
+      },
+      {
+         "name":"ECMAScript 2",
+         "releaseDate":"01/01/1998",
+         "releaseYear":"1998",
+		 "features":[""],
+		 "references":"",
+         "changes":{
+            "storageLocationCode":null,
+            "storageState":"",
+            "storageCountry":"NL",
+            "storageZipcode":"",
+            "storageEmail":"eew@dkkdk.com",
+            "storagePhone":"+31.765.242.650"
+         }
+      },
+      {
+         "name":"ECMAScript 3",
+         "releaseDate":"01/01/1999",
+         "releaseYear":"1999",
+		 "features":[""],
+		 "references":"",
+         "changes":{
+            "storageLocationCode":null,
+            "storageState":"",
+            "storageCountry":"NL",
+            "storageZipcode":"",
+            "storageEmail":"eew@dkkdk.com",
+            "storagePhone":"+31.765.242.650"
+         }
+      },
+      {
+         "name":"ECMAScript 5",
+         "releaseDate":"01/01/2009",
+         "releaseYear":"2009",
+		 "features":[""],
+		 "references":"",
+         "changes":{
+            "storageLocationCode":null,
+            "storageState":"",
+            "storageCountry":"NL",
+            "storageZipcode":"",
+            "storageEmail":"eew@dkkdk.com",
+            "storagePhone":"+31.765.242.650"
+         }
+      },
+      {
+         "name":"ECMAScript 5.1",
+         "releaseDate":"01/01/2011",
+         "releaseYear":"2011",
+		 "features":[""],
+		 "references":"",
+         "changes":{
+            "storageLocationCode":null,
+            "storageState":"",
+            "storageCountry":"NL",
+            "storageZipcode":"",
+            "storageEmail":"eew@dkkdk.com",
+            "storagePhone":"+31.765.242.650"
+         }
+      },
+      {
+         "name":"ECMAScript 6",
+         "releaseDate":"01/01/2015",
+         "releaseYear":"2015",
+		 "features":[""],
+		 "references":"",
+         "changes":{
+            "storageLocationCode":null,
+            "storageState":"",
+            "storageCountry":"NL",
+            "storageZipcode":"",
+            "storageEmail":"eew@dkkdk.com",
+            "storagePhone":"+31.765.242.650"
+         }
+      },
+      {
+         "name":"ECMAScript 7",
+         "releaseDate":"01/01/2016",
+         "releaseYear":"2016",
+		 "features":[""],
+		 "references":"",
+         "changes":{
+            "storageLocationCode":null,
+            "storageState":"",
+            "storageCountry":"NL",
+            "storageZipcode":"",
+            "storageEmail":"eew@dkkdk.com",
+            "storagePhone":"+31.765.242.650"
+         }
+      }
+	  
+   ]
+}
