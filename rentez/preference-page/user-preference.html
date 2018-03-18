@@ -1,0 +1,686 @@
+<!--A Design by W3layouts
+Author: grajendran
+Author URL: http://www.rentez.in
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>User Preference</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="User preference Page">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!--fonts-->
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+	<!--//fonts-->
+
+
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="js/checkBox.js"></script>
+
+</head>
+
+<body>
+	<!--background-->
+	<h1> Preference Form</h1>
+	<div class="bg-agile">
+		<div class="book-appointment">
+			<h2>Preference Information</h2>
+			<form autocomplete="off" onsubmit="return fun();" method="post">
+				<div class="left-agileits-w3layouts same">
+					<div class="gaps">
+						<p>Loacation</p>
+						<div class="autocomplete">
+							<input id="myInput" type="text" value="" name="location" placeholder="Localities*" required="" />
+						</div>
+					</div>
+					<div class="gaps">
+						<p>Number of Bedrooms</p>
+						<div class="groupCheck">
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">1 BHK</button>
+								<input type="checkbox" id="No-of-BHK" name="No-of-BHK" class="hidden" value="1 BHK" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">2 BHK</button>
+								<input type="checkbox" class="hidden" id="No-of-BHK" name="No-of-BHK" value="2 BHK" />
+							</span>
+							<br />
+							<br />
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">3 BHK</button>
+								<input type="checkbox" class="hidden" id="No-of-BHK" name="No-of-BHK" value="3 BHK" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">4 BHK</button>
+								<input type="checkbox" class="hidden" id="No-of-BHK" name="No-of-BHK" value="4 BHK" />
+							</span>
+
+							<br />
+							<br />
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">4+BHK</button>
+								<input type="checkbox" class="hidden" id="No-of-BHK" name="No-of-BHK" value="4+ BHK" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">1 RK</button>
+								<input type="checkbox" id="No-of-BHK" name="No-of-BHK" class="hidden" value="1 RK" />
+							</span>
+						</div>
+					</div>
+
+					<div class="gaps">
+						<p> Number of Bathrooms</p>
+						<div class="groupCheck">
+							<p>
+							</p>
+							<div class="input-group">
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant">
+										<span class="glyphicon glyphicon-minus"></span>
+									</button>
+								</span>
+								<input type="text" id="quant" name="quant" class="form-control input-number" value="1" min="1" max="5">
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant">
+										<span class="glyphicon glyphicon-plus"></span>
+									</button>
+								</span>
+							</div>
+							<p></p>
+						</div>
+					</div>
+
+					<div class="gaps">
+						<p>Tenents</p>
+						<div class="groupCheck">
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Family</button>
+								<input type="checkbox" id="Tenents" name="Tenents" class="hidden" value="Family" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Bachelore</button>
+								<input type="checkbox" id="Tenents" name="Tenents" class="hidden" value="Bachelore" />
+							</span>
+
+							<br />
+							<br />
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Company</button>
+								<input type="checkbox" class="hidden" id="Tenents" name="Tenents" value="Company" />
+							</span>
+						</div>
+					</div>
+
+					<div style="color:#fff;" class="gaps">
+						<p>Waiting Period</p>
+						<!-- <div class="groupCheck">
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Immediate</button>
+								<input type="checkbox" id="Waiting-Period" name="Waiting-Period" class="hidden" value="Immediate" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">One Month</button>
+								<input type="checkbox" id="Waiting-Period" name="Waiting-Period" class="hidden" value="One Month" />
+							</span>
+
+							<br />
+							<br />
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Date</button>
+								<input type="checkbox" class="hidden" id="Waiting-Period" name="Waiting-Period" value="Date" />
+							</span> -->
+
+						<label class="radio-inline">
+							<input type="radio" name="optradio" value="Immediate">Immediate
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="optradio" value="One Month" checked>One Month
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="optradio" value="Date">On Date
+						</label>
+
+						<input style="display:none;" placeholder="Date" type="text" id="datepicker">
+					</div>
+					<br />
+					<br />
+					<div class="gaps">
+						<p>Furnishing Type</p>
+						<div class="groupCheck">
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Full</button>
+								<input type="checkbox" id="Furnishing-Type" name="Furnishing-Type" class="hidden" value="Full" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Semi</button>
+								<input type="checkbox" id="Furnishing-Type" name="Furnishing-Type" class="hidden" value="Semi" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">None</button>
+								<input type="checkbox" class="hidden" id="Furnishing-Type" name="Furnishing-Type" value="None" />
+							</span>
+						</div>
+					</div>
+
+					<div class="gaps">
+						<p>Parking Type</p>
+						<div class="groupCheck">
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Car</button>
+								<input type="checkbox" id="Parking-Type" name="Parking-Type" class="hidden" value="Car" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Bike</button>
+								<input type="checkbox" id="Parking-Type" name="Parking-Type" class="hidden" value="Bike" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">None</button>
+								<input type="checkbox" class="hidden" id="Parking-Type" name="Parking-Type" value="None" />
+							</span>
+						</div>
+					</div>
+
+					<div class="gaps">
+						<p>Amenities</p>
+						<div class="groupCheck">
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Elevator</button>
+								<input type="checkbox" id="Amenities" name="Amenities" class="hidden" value="Elevator" />
+							</span>
+
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Security</button>
+								<input type="checkbox" id="Amenities" name="Amenities" class="hidden" value="Security" />
+							</span>
+							<br />
+							<br />
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Power Backup</button>
+								<input type="checkbox" class="hidden" id="Amenities" name="Amenities" value="Power Backup" />
+							</span>
+
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Gym</button>
+								<input type="checkbox" id="Amenities" name="Amenities" class="hidden" value="Gym" />
+							</span>
+							<br />
+							<br />
+
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Club House</button>
+								<input type="checkbox" id="Amenities" name="Amenities" class="hidden" value="Club House" />
+							</span>
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Park</button>
+								<input type="checkbox" id="Amenities" name="Amenities" class="hidden" value="Park" />
+							</span>
+							<br />
+							<br />
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Play Area</button>
+								<input type="checkbox" id="Amenities" name="Amenities" class="hidden" value="lay Area" />
+							</span>
+
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Modular Kitchen</button>
+								<input type="checkbox" class="hidden" id="Amenities" name="Amenities" value="Modular Kitchen" />
+							</span>
+
+							<br />
+							<br />
+							<span class="button-checkbox">
+								<button type="button" class="btn btn-sm" data-color="primary">Swimming Pool</button>
+								<input type="checkbox" class="hidden" id="Amenities" name="Amenities" value="Swimming Poo" />
+							</span>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="right-agileinfo same">
+
+					<input type="hidden" id="uname" name="UserName" value="kj">
+					<input type="hidden" id="email" name="email" value="gd">
+					<label hidden type="hidden" value="sd" id="tmp" name="tmp"></label>
+
+				</div>
+				<div class="clear"></div>
+				<!-- <button type="submit" onclick="fun();" >Submit </button> -->
+				<input type="submit" value="Submit" class="btn search-btn center-block" />
+			</form>
+		</div>
+	</div>
+
+	<!--copyright-->
+	<div class="copy w3ls">
+		<p>&copy; 2018. User Preference Form . All Rights Reserved | Design by
+			<a href="http://rentez.in/" target="_blank">RentEz.in</a>
+		</p>
+	</div>
+	<!--//copyright-->
+
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- Calendar -->
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		//plugin bootstrap minus and plus
+		//http://jsfiddle.net/laelitenetwork/puJ6G/
+		$('.btn-number').click(function (e) {
+			e.preventDefault();
+
+			fieldName = $(this).attr('data-field');
+			type = $(this).attr('data-type');
+			var input = $("input[name='" + fieldName + "']");
+			var currentVal = parseInt(input.val());
+			if (!isNaN(currentVal)) {
+				if (type == 'minus') {
+
+					if (currentVal > input.attr('min')) {
+						input.val(currentVal - 1).change();
+					}
+					if (parseInt(input.val()) == input.attr('min')) {
+						$(this).attr('disabled', true);
+					}
+
+				} else if (type == 'plus') {
+
+					if (currentVal < input.attr('max')) {
+						input.val(currentVal + 1).change();
+					}
+					if (parseInt(input.val()) == input.attr('max')) {
+						$(this).attr('disabled', true);
+					}
+
+				}
+			} else {
+				input.val(0);
+			}
+		});
+		$('.input-number').focusin(function () {
+			$(this).data('oldValue', $(this).val());
+		});
+		$('.input-number').change(function () {
+
+			minValue = parseInt($(this).attr('min'));
+			maxValue = parseInt($(this).attr('max'));
+			valueCurrent = parseInt($(this).val());
+
+			name = $(this).attr('name');
+			if (valueCurrent >= minValue) {
+				$(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled')
+			} else {
+				alert('Sorry, the minimum value was reached');
+				$(this).val($(this).data('oldValue'));
+			}
+			if (valueCurrent <= maxValue) {
+				$(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled')
+			} else {
+				alert('Sorry, the maximum value was reached');
+				$(this).val($(this).data('oldValue'));
+			}
+
+
+		});
+		$(".input-number").keydown(function (e) {
+			// Allow: backspace, delete, tab, escape, enter and .
+			if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+				// Allow: Ctrl+A
+				(e.keyCode == 65 && e.ctrlKey === true) ||
+				// Allow: home, end, left, right
+				(e.keyCode >= 35 && e.keyCode <= 39)) {
+				// let it happen, don't do anything
+				return;
+			}
+			// Ensure that it is a number and stop the keypress
+			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+				e.preventDefault();
+			}
+		});
+	</script>
+	<!-- //Calendar -->
+
+	<!-- Auto Complete -->
+
+	<script>
+
+
+		function autocomplete(inp, arr) {
+			/*the autocomplete function takes two arguments,
+			the text field element and an array of possible autocompleted values:*/
+			var currentFocus;
+			/*execute a function when someone writes in the text field:*/
+			inp.addEventListener("input", function (e) {
+				var a, b, i, val = this.value;
+				/*close any already open lists of autocompleted values*/
+				closeAllLists();
+				if (!val) { return false; }
+				currentFocus = -1;
+				/*create a DIV element that will contain the items (values):*/
+				a = document.createElement("DIV");
+				a.setAttribute("id", this.id + "autocomplete-list");
+				a.setAttribute("class", "autocomplete-items");
+				/*append the DIV element as a child of the autocomplete container:*/
+				this.parentNode.appendChild(a);
+				/*for each item in the array...*/
+				for (i = 0; i < arr.length; i++) {
+					/*check if the item starts with the same letters as the text field value:*/
+					if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+						/*create a DIV element for each matching element:*/
+						b = document.createElement("DIV");
+						/*make the matching letters bold:*/
+						b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+						b.innerHTML += arr[i].substr(val.length);
+						/*insert a input field that will hold the current array item's value:*/
+						b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+						/*execute a function when someone clicks on the item value (DIV element):*/
+						b.addEventListener("click", function (e) {
+							/*insert the value for the autocomplete text field:*/
+							inp.value = this.getElementsByTagName("input")[0].value;
+							/*close the list of autocompleted values,
+							(or any other open lists of autocompleted values:*/
+							closeAllLists();
+						});
+						a.appendChild(b);
+					}
+				}
+			});
+			/*execute a function presses a key on the keyboard:*/
+			inp.addEventListener("keydown", function (e) {
+				var x = document.getElementById(this.id + "autocomplete-list");
+				if (x) x = x.getElementsByTagName("div");
+				if (e.keyCode == 40) {
+					/*If the arrow DOWN key is pressed,
+					increase the currentFocus variable:*/
+					currentFocus++;
+					/*and and make the current item more visible:*/
+					addActive(x);
+				} else if (e.keyCode == 38) { //up
+					/*If the arrow UP key is pressed,
+					decrease the currentFocus variable:*/
+					currentFocus--;
+					/*and and make the current item more visible:*/
+					addActive(x);
+				} else if (e.keyCode == 13) {
+					/*If the ENTER key is pressed, prevent the form from being submitted,*/
+					e.preventDefault();
+					if (currentFocus > -1) {
+						/*and simulate a click on the "active" item:*/
+						if (x) x[currentFocus].click();
+					}
+				}
+			});
+			function addActive(x) {
+				/*a function to classify an item as "active":*/
+				if (!x) return false;
+				/*start by removing the "active" class on all items:*/
+				removeActive(x);
+				if (currentFocus >= x.length) currentFocus = 0;
+				if (currentFocus < 0) currentFocus = (x.length - 1);
+				/*add class "autocomplete-active":*/
+				x[currentFocus].classList.add("autocomplete-active");
+			}
+			function removeActive(x) {
+				/*a function to remove the "active" class from all autocomplete items:*/
+				for (var i = 0; i < x.length; i++) {
+					x[i].classList.remove("autocomplete-active");
+				}
+			}
+			function closeAllLists(elmnt) {
+				/*close all autocomplete lists in the document,
+				except the one passed as an argument:*/
+				var x = document.getElementsByClassName("autocomplete-items");
+				for (var i = 0; i < x.length; i++) {
+					if (elmnt != x[i] && elmnt != inp) {
+						x[i].parentNode.removeChild(x[i]);
+					}
+				}
+			}
+			/*execute a function when someone clicks in the document:*/
+			document.addEventListener("click", function (e) {
+				closeAllLists(e.target);
+			});
+		}
+
+		/*An array containing all the country names in the world:*/
+		var countries = ["Aavalahalli", "Abbigere", "Adakamaranahalli", "Adugodi", "AECS Layout", "Akshayanagar", "Amrutha Halli", "Anagalapura", "Ananth Nagar", "Andrahalli", "Anekal", "Anjanapura", "Annapurneshwari Nagar", "Arasanakunte", "Arekere", "Ashirvad Colony", "Ashok Nagar", "Attibele", "Anekal Road",
+			"Attiguppe", "Azad Nagar", "B Narayanapura", "Babusa Palya", "Bagalakunte", "Bagaluru", "Bagepalli", "Baiyyappanahalli", "Balagere", "Ballur", "Banashankari", "Banashankari", "Banashankari 3rd Stage", "Banashankari 5th Stage", "Banaswadi", "Bangalore- Hyderabad Highway Road", "Bannerghatta", "Bannerghatta Jigani Road",
+			"Bannerghatta Road", "Bapuji Nagar", "Basapura", "Basavanagar", "Basavanagudi", "Basavanna Nagar", "Basaveshwara Nagar", "Battarahalli", "Begur", "Begur Road", "Belathur", "Belatur", "Bellandur", "Bellandur Outer Ring Road", "Bellary Road", "BEML Layout", "BEML Layout Raja Rajeshwari Nagar", "Bennigana Halli", "Benson", "Town",
+			"Bettahalasur", "Bhaktharahalli", "Bhoganhalli", "Bhoopasandra", "Bhovi Palya", "Bhuvaneshwari Nagar", "Bidadi", "Bidrahalli", "Bikasipura", "Bikkanahalli", "Bilekahalli", "Bileshivale", "Binny Pete", "Bommanahalli", "Bommasandra", "Bommenahalli", "Boyalahalli", "Brigade", "Road", "Brookefield",
+			"BTM Layout", "Budigere", "Budigere Road", "Budihal", "Byatarayanapura", "Bylkonehalli", "Byrathi", "Cambridge Layout", "Carmelaram", "Chadalapura", "Chamarajpet", "Chamundi Nagar", "Chandapura", "Chandapura", "Anekal Road", "Chandapura-Sarjapura Road", "Chandra Layout", "Chansandra", "Chelekare", "Chickpet",
+			"Chikbanavara", "Chikka Banaswadi", "Chikka Tirupathi", "Chikka Tirupathi Road", "Chikkaballapur", "Chikkaballapur-Gauribidanur Road", "Chikkabasavanapura", "Chikkabellandur", "Chikkabidarakallu", "Chikkagubbi Village", "Chikkajala", "Chikkakannalli", "Chikkalasandra", "Chikkanagamangala", "Chikkanahalli", "Chikkasagarahalli", "Chikkathoguru", "Chinnapa Garden", "Chinnapanna", "Halli",
+			"Chintamani", "Chokkanahalli", "Cholanayakanahalli", "Choodasandra", "Commercial Street", "Cooke Town", "Cottonpete", "Cox Town", "CQAL Layout", "Craig Park Layout", "Cunningham Road", "CV Raman Nagar", "Dabaspete", "Dasarahalli Hebbal", "Dasarahalli Main Road", "Dayananda Nagar", "Defence Colony -", "Bagalagunte", "Devanahalli", "Devanahalli Road",
+			"Devarachikkanahalli", "Devasthanagalu", "Devinagar", "Dodda Aalada Mara Road", "Dodda Banasvadi", "Doddaballapur", "Doddaballapur Road", "Doddabele", "Doddabommasandra", "Doddagubbi", "Doddakallasandra", "Doddakammanahalli", "Doddakannalli", "Doddathoguru", "Doddenahalli", "Doddenakundi", "Dodsworth", "Layout", "Dollars Colony", "Domlur",
+			"Dommasandra", "Donnenahalli", "Dooravani Nagar", "Ejipura", "Electronic City Phase I", "Electronic City Phase II", "Essel Gardens", "Frazer Town", "Ganapathihalli", "Gandhi Nagar", "Ganga Nagar", "Garden Layout", "Garudachar Palya", "Garvebhavi Palya", "Gattahalli", "Gauribidanur", "Girinagar", "GM Palya", "Gollahalli", "Gottigere",
+			"Gubalala", "Guddahatti", "Gunjur", "Gunjur Mugalur Road", "Guttahalli", "HAL Layout", "HAL Layout2", "Hancharahalli", "Hanumantha Nagar", "Haragadde", "Haralur Road", "Harlur", "Harohalli", "Haudin Road", "HBR Layout", "Hebbal", "Hebbal Kempapura", "Hegde Nagar", "Hemmigepura", "Hennur",
+			"Hennur Road", "Hesaraghatta", "HMT Layout", "Hombegowda Nagar", "Hongasandra", "Hoodi", "Horamavu", "Horamavu Agara", "Hosa", "Road", "Hosakerehalli", "Hosapalaya", "Hoskote", "Hoskote Malur Road", "Hosur Road", "HRBR Layout", "HSR Layout", "HSR Layout Sector 1", "HSR Layout Sector 2", "HSR Layout Sector 3",
+			"HSR Layout Sector 4", "HSR Layout Sector 5", "HSR Layout Sector 6", "HSR Layout Sector 7", "Hulimavu", "Hullahalli", "Huskur", "Huttanahalli", "Immadihalli", "Indira Nagar", "Infantry Road", "International Airport Road", "ISRO Layout", "ITPL Road", "IVC Road", "Jagadish Nagar", "Jagajeevanram Nagar", "Jakkasandra", "Jakkur", "Jakkuru Layout",
+			"Jalahalli Cross", "Jalahalli East", "Jalahalli West", "Jangamakote", "Jaya", "Chamarajendra Nagar", "Jayamahal", "Jayanagar", "Jeevanbheema Nagar", "Jigani", "Jigani Anekal Road", "Jnana Ganga Nagar", "JP Nagar", "JP", "Nagar Phase 1", "JP Nagar Phase 2", "JP Nagar Phase 3", "JP Nagar Phase 4", "JP Nagar Phase 5", "JP Nagar Phase 6",
+			"JP Nagar Phase 7", "JP Nagar Phase 8", "JP Nagar Phase 9", "Judicial Layout", "K Channasandra", "K R Puram", "Kacharakanahalli", "Kadabagere", "Kadubeesanahalli", "Kadugodi", "Kadugondanahalli", "Kadusonnappanahalli", "Kaggadasapura", "Kaggalipura", "kaikondrahalli", "Kal", "sipalayam", "Kalena Agrahara", "Kalkere", "Kalkunte",
+			"Kallahalli", "Kallumantapa", "Kalyan Nagar", "Kamaksipalya", "Kamala Nagar", "Kamanahalli", "Kambalipura", "Kambipura", "Kammanahalli", "Kammasandra", "Kammasandra Agrahara", "Kanaka Nagar", "Kanakapura", "Kanakapura Road", "Kannamangala", "Kartik Nagar", "Karuna Nagar", "Kasavanahalli", "Kasturi Nagar", "Kathriguppe",
+			"Kattigenahalli", "Kaval Byrasandra", "Kempapura", "Kempegowda Nagar", "Kengeri", "Kengeri Satellite Town", "Kithiganur", "Kodathi", "Kodichikkanahalli", "Kodigehalli", "Kodigehalli - KR Puram", "Kodihalli", "Kodipur", "Kogilu", "Kolar", "Road", "Kolar-Chikkaballapur Road", "Kommaghatta", "Konanakunte", "Konena Agrahara",
+			"Koppa", "Koralur", "Koramangala", "Kothanoor", "Kothanur", "Koti Hosahalli", "Kudlu", "Kudlu Gate", "Kumaraswamy Layout", "Kumbalgodu", "Kundalahalli", "Kunigal Road", "Kurudusonnenahalli", "Kuthaganahalli", "Laggere", "Lake City", "Lakshmamma Layout", "lal bagh", "Langford Road", "Langford Town",
+			"Lavelle Road", "LB Shastri Nagar", "Lingadheeranahalli", "Lingarajapuram", "Madhava Nagar", "Madiwala", "Magadi Road", "Mahadevapura", "Mahalakshmi Layout", "Majestic", "Mallathahalli", "Malleshpalya", "Malleshwaram", "Malur-Hosur Road", "Marathahalli", "Marathahalli ORR", "Marathahalli-Sarjapur Outer Ring Road", "Margondanahalli", "Maruthi Nagar (Madiwala)", "Maruthi Nagar (Yelahanka)",
+			"Maruthi Nagar", "Maruthi Sevanagar", "Masti - Malur Road", "Mathikere", "Mayaghanahalli", "Medihalli", "Meenakunte", "MG Road", "Mico Layout", "Millers Road", "MS Palya", "Munireddy Layout", "Munireddypalya", "Munnekollal", "Murugeshpalya", "Mysore Road", "Nagadevanahalli", "Nagarbhavi", "Nagarbhavi Circle", "Nagasandra",
+			"Nagavara", "Nagondanahalli", "Nallurhalli", "Nandi Hills", "Nandini Layout", "Nanjappa Garden", "Narasapura", "Narayanapura", "National Highway 207", "Nayanda Halli", "Neeladri Nagar", "Neelasandra", "Nehru Nagar", "Nelamangala", "Nelamangala - Chikkaballapura Road", "New BEL Road", "New Thippasandra", "Nobo", "Nagar", "NRI Layout",
+			"Off Sarjapur road", "Old Airport Road", "Old Madras Road", "OMBR Layout", "Outer Ring Road", "Padmanabha Nagar", "Pai Layout", "Palace Road", "Panathur", "Panduranga Nagar", "Pattandur Agrahara", "Pattegarhpalya", "Peenya", "Prashanth Nagar", "R.K. Hegde Nagar", "Race Course Road", "Rachenahalli", "Ragavendra Nagar", "Raghavendra Colony", "Raghuvanahalli",
+			"Raja Rajeshwari Nagar", "Rajaji Nagar", "Rajanukunte", "Rajiv Gandhi Nagar", "Ramagondanahalli", "Ramamurthy Nagar", "Ramohalli", "Rayasandra", "Residency Road", "Rest House Road", "Richard's Park", "Richards Town", "Richmond Road", "Richmond Town", "RMV", "RMV 2nd Stage", "RMV Extension", "Roopena Agrahara", "RT Nagar", "S.Medihalli",
+			"Sadashiva Nagar", "Sadduguntepalya", "Sahakara Nagar", "Sampangi Rama Nagar", "Sampigehalli", "Sanjay Nagar", "Sankey Road", "Sarjapur", "Sarjapur Attibele Road", "Sarjapur Bagalur Road", "Sarjapur Road", "Sathanur", "Seegehalli", "Seenappa Layout", "Seshadripuram", "Shankarapura", "Shanthala Nagar", "Shanthi Nagar", "Shanthi Pura", "Shettihalli",
+			"Shigehalli", "Shivaji Nagar", "Siddapura", "Sidlaghatta", "Silk Board", "Silver Springs Layout", "Singanahalli", "Singasandra", "SMV Layout", "Solur", "Somashetti Halli", "Sompura", "Sonnenahalli", "Soukya Road", "Soundarya Layout", "Srinagar", "Srinivasa Nagar", "Srirampura", "St. Johns Road", "Subramanyapura",
+			"Sudhama Nagar", "Sulikere", "Sunkadakatte", "Suryanagar", "T Dasarahalli", "Talaghattapura", "Tavarekere-BTM", "TC Palya Road", "Teacher's Colony", "Thanisandra", "Thanisandra Main Road", "Tharaballi", "Tharabanahalli", "Thavarekere-Magadi Road", "Thippasandra", "Thubarahalli", "Thurahalli", "Tilak Nagar", "Tippenahalli", "Tumkur Road",
+			"Ullal", "Ulsoor", "Uttarahalli", "Uttarahalli", "Uttarahalli Main Road", "Vaderahalli", "Varthur", "Varthur Road", "Vasanth Nagar", "Vasanthapura", "Veerannapalya", "Vehloli", "Venkatagiri Kote", "Venkatapura", "Venkateshpuram", "Victoria Layout", "Vidyaranyapura", "Vignana Nagar", "Vijaya", "Bank Colony",
+			"Vijayanagar", "Vijaypura", "Vinayaka Layout", "Virupakshapura", "Vishweshwaraiah Layout", "Vittal Mallya Road", "Vittal Nagar", "Viveka", "Nagar", "Weavers Colony", "Wheeler Road", "Whitefield", "Whitefield Road", "Williams Town", "Wilson Garden", "Wind Tunnel Road", "Yarandahalli", "Yelachena Halli", "Yelahanka", "Yelahanka New Town",
+			"Yelanahalli", "Yemalur", "Yeshwanthpur"];
+
+
+		/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+		autocomplete(document.getElementById("myInput"), countries);
+
+		$('#myInput').val(localStorage.getItem("location"));
+	</script>
+
+	<!-- End -->
+
+	<!-- DB Script -->
+	<script src="/__/firebase/4.0.0/firebase-app.js"></script>
+	<script src="/__/firebase/4.0.0/firebase-auth.js"></script>
+	<script src="/__/firebase/4.0.0/firebase-database.js"></script>
+	<script src="/__/firebase/init.js"></script>
+
+	<!-- <script type="text/javascript" src="scripts/firebaseInit.js"></script> -->
+
+
+	<script type="text/javascript">
+
+		var auth = null;
+		var dbRef = null;
+		var prefRef = null;
+		var displayName1 = null;
+
+
+		/**
+		 * Set up UI event listeners and registering Firebase auth listeners.
+		 */
+		window.onload = function () {
+
+			// Listening for auth state changes.
+			// document.getElementById('tmp').innerHTML = 'on load';
+
+			firebase.auth().onAuthStateChanged(function (user) {
+				if (user) {
+					// User is signed in.
+					var uid = user.uid;
+					var email = user.email;
+					var photoURL = user.photoURL;
+					var phoneNumber = user.phoneNumber;
+					var isAnonymous = user.isAnonymous;
+					displayName1 = user.displayName;
+					var providerData = user.providerData;
+					var emailVerified = user.emailVerified;
+
+					// document.getElementById('tmp').innerHTML = 'displayName';
+
+				}
+
+				updateSignedInUserStatusUI();
+			});
+		};
+
+		/**
+		 * Updates the Signed in user status panel.
+		 */
+		function updateSignedInUserStatusUI() {
+			// window.location = "index-gust.html";
+			var user = firebase.auth().currentUser;
+			dbRef = firebase.database();
+			prefRef = dbRef.ref('UserPreferences');
+
+			if (user) {
+				auth = user;
+			} else {
+
+			}
+		}
+
+		/**
+	* Signs out the user when the sign-out button is clicked.
+	*/
+		function onSignOutClick() {
+			firebase.auth().signOut();
+		}
+
+	</script>
+
+
+	<script>
+		function fun() {
+
+			// document.getElementById('tmp').innerHTML = 'in fun';
+
+			// alert("in function call");
+			
+			// alert("uname: "+displayName1);
+
+			if (auth != null) {
+				// document.getElementById('tmp').innerHTML = $('#amenities').val();
+				// alert("in user if call");
+
+				// var str = $('#amount').val();
+
+				// alert("loc:" +$('#myInput').val()+"
+				// no_of_bhk: "+getState("No-of-BHK")+"
+				// no_of_bathroom: "+$('#quant').val()+"
+				// furnishing_type: "+getState("Furnishing-Type")+"
+				// parking: "+getState("Parking-Type")+"
+				// tenants: "+getState("Tenents")+"
+				// waiting_period: "+getState("Waiting-Period")+"
+				// amenities: "+getState("Amenities")+"
+				// rent_range: "+localStorage.getItem("amount")+"
+				// Type: "+localStorage.getItem("proType"));
+
+				// alert("waiting: "+getWaiting());
+				// var uname = displayName;
+				prefRef.child(auth.uid)
+					.push({
+						name: displayName1,
+						email: 'YTD',
+						location: $('#myInput').val(),
+						no_of_bhk: getState("No-of-BHK"),
+						no_of_bathroom: $('#quant').val(),
+						furnishing_type: getState("Furnishing-Type"),
+						parking: getState("Parking-Type"),
+						tenants: getState("Tenents"),
+						waiting_period: getWaiting(),
+						amenities: getState("Amenities"),
+						rent_range: localStorage.getItem("amount"),
+						Type: localStorage.getItem("proType")
+
+					});
+
+				window.location = "../thankyou.html";
+				// document.getElementById('tmp').innerHTML = 'html';
+
+				return false;
+
+			}
+			else {
+				document.location = "app_login/login.html";
+
+				return true;
+
+			}
+		}
+
+		function getState(chkName) {
+
+			var str = "";
+
+			$("input:checkbox[name=" + chkName + "]:checked").each(function () {
+				str = str.concat($(this).val(), ', ');
+			});
+
+			return str;
+
+		}
+
+		function getWaiting() {
+
+			var sel = $('input[name=optradio]:checked').val();
+
+
+			if (null != sel) {
+
+				if (sel == "Date") {
+					var get = document.getElementById('datepicker').value;
+					// alert("this.checked "+get);
+					return get;
+				}
+				else {
+
+					return sel;
+				}
+			}
+			else {
+				return "null";
+			}
+		}
+
+		$('input[name=optradio]').change(function () {
+
+			var sel = $('input[name=optradio]:checked').val();
+
+			if (sel == "Date") {
+				// alert("this.checked "+sel);
+				document.getElementById('datepicker').style.display = 'block';
+			}
+			else {
+				{
+					document.getElementById('datepicker').style.display = 'none';
+				}
+			}
+		});
+
+		$(function () {
+			$("#datepicker").datepicker();
+		});
+
+
+	</script>
+
+	<!-- DB Script -->
+
+</body>
+
+</html>

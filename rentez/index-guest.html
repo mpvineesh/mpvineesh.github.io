@@ -1,0 +1,783 @@
+<!--
+author: grajendran
+author URL: http://rentez.in
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>RentEz.in</title>
+	<!-- custom-theme -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Flat Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	<!-- for banner css files -->
+	<link rel="stylesheet" type="text/css" href="css/zoomslider.css" />
+	<!--zoomslider css -->
+	<script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+	<!--modernizer css -->
+	<!-- //for banner css files -->
+
+	<link href="css/carousel.css" type="text/css" rel="stylesheet" media="all">
+	<!--for team carousel css -->
+
+	<link href="css/jQuery.lightninBox.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- for portfolio lightninBox css -->
+
+
+	<!-- custom-theme css files -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //custom-theme css files-->
+
+	<!-- font-awesome-icons -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome-icons -->
+
+	<!-- googlefonts -->
+	<link href="//fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,vietnamese"
+	 rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	 rel="stylesheet">
+	<!-- //googlefonts -->
+
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui1.css">
+
+	<link href="css/checkBox.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+	<!--/main-header-->
+	<div id="demo-1" data-zs-src='["images/b1.jpg", "images/b2.jpg", "images/b3.jpg","images/b4.jpg"]' data-zs-overlay="dots">
+		<div class="demo-inner-content">
+
+			<!--/banner-info-->
+			<div class="header">
+				<div class="header-main">
+					<div class="container">
+						<nav class="navbar navbar-default">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<h1>
+									<a href="index.html">RentEz
+										<span>An Agent You Can Trust!</span>
+									</a>
+								</h1>
+							</div>
+							<!-- navbar-header -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+									<li class="scroll hvr-outline-in">
+										<a href="index.html">Home</a>
+									</li>
+									<li>
+										<a class="scroll hvr-outline-in" href="#about">About</a>
+									</li>
+									<li>
+										<a class="scroll hvr-outline-in" href="#services">Services</a>
+									</li>
+									<li>
+										<a class="scroll hvr-outline-in" href="#contact">Contact</a>
+									</li>
+									<li>
+										<a href="app_login/login.html" title="Login">Login</a>
+									</li>
+								</ul>
+							</div>
+							<div class="clearfix"> </div>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<br />
+			<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_2.jpg)">
+				<div class="overlay"></div>
+				<div class="gtco-container">
+
+					<div class="row">
+						<div class="col-md-12 col-md-offset-0 text-left">
+							<div class="row row-mt-15em">
+								<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+									<h1>Hire real estate consultants at zero cost.</h1>
+									<h6 style="color:aqua;">No Hidden Charges *</h6>
+								</div>
+								<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+									<div class="form-wrap">
+										<div class="tab">
+											<div class="tab-content">
+												<div class="tab-content-inner active" data-content="signup">
+													<h3>Get Started</h3>
+													<br />
+													<form autocomplete="off" id="dash-form" onsubmit="return fun();" method="post">
+														<div class="row form-group">
+															<div class="col-md-12">
+																<label for="Location">Location</label>
+																<!-- <input type="text" id="fullname" class="form-control"> -->
+																<input class="form-control autocomplete" id="myInput" type="text" value="" name="location" placeholder="Localities">
+															</div>
+														</div>
+														<div class="row form-group">
+															<div class="col-md-12">
+																<label for="activities">Rent range</label>
+																<div style="background:gray;" id="slider-range"></div>
+																<!-- <label type="text" id="amount" style="border: 0;">gfh</label> -->
+																<!-- <div> -->
+																<input name="amount" type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold; font-size:15px; background:transparent;">
+																<!-- </div> -->
+															</div>
+														</div>
+														<div class="row form-group">
+															<div class="col-md-12">
+																<label for="destination">Property Type</label>
+																<br />
+																<span class="button-checkbox ">
+																	<button type="button" class="btn btn-sm" data-color="primary">Apartment</button>
+																	<input type="checkbox" id="pType" name="pType" class="hidden" value="Apartment" />
+																</span><br />
+																<span class="button-checkbox">
+																	<button type="button" class="btn btn-sm" data-color="primary">Luxury Apartment</button>
+																	<input type="checkbox" id="pType" name="pType" class="hidden" value="Luxury Apartment" />
+																</span>
+																<br />
+																<span class="button-checkbox">
+																	<button type="button" class="btn btn-sm" data-color="primary">Independent Villa</button>
+																	<input type="checkbox" id="pType" name="pType" class="hidden" value="Independent Villa/House" />
+																</span><br />
+																<span class="button-checkbox">
+																	<button type="button" class="btn btn-sm" data-color="primary">PG/Hostel</button>
+																	<input type="checkbox" id="pType" name="pType" class="hidden" value="PG/Hostel" />
+																</span>
+																<br />
+																<span class="button-checkbox">
+																	<button type="button" class="btn btn-sm" data-color="primary">Independent Floor/Bulder</button>
+																	<input type="checkbox" id="pType" name="pType" class="hidden" value="Independent Floor/Builder" />
+																</span>
+															</div>
+														</div>
+														<!-- <div class="row form-group">
+															<div class="col-md-12">
+																<label for="date-start">Date Travel</label>
+																<input type="text" id="date-start" class="form-control">
+															</div>
+														</div> -->
+
+														<div class="row form-group">
+															<div class="col-md-12">
+																<input type="submit" class="btn btn-primary btn-block" value="Proceed">
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--/banner-info-->
+		</div>
+	</div>
+	<!--/banner-section-->
+
+	<!-- about section -->
+	<div class="about" id="about">
+		<div class="container">
+			<div class="about-top">
+				<div class="col-md-4 text-center ">
+					<h3>Who we are</h3>
+				</div>
+				<div class="col-md-8 text">
+					<p>We are committed to bridge the gap between landlords & tenants with the help of technology.</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="about-bottom-grid2">
+				<div class="col-md-6 bottomgridimg">
+					<img src="images/about2.jpg" alt="">
+				</div>
+				<div class="col-md-6 bottomgridtext bottomleft">
+					<h3>Our Story</h3>
+					<span></span>
+					<p>We are a bunch of passionate people with a vision to organize the real estate rental market. We strongly believe, we
+						can disrupt the rental business and reach our service at micro level. We understand, what the market requires is not
+						just connecting landlord with tenant but much more than that. We are building an ecosystem where landlord, tenants
+						& real estate agents co-exist by adding value to the chain.</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="about-bottom-grid1">
+				<div class="col-md-6 bottomgridtext">
+					<h3>Our Approach</h3>
+					<span></span>
+					<h2>Our uniqueness starts with</h2>
+					<!-- <span></span> -->
+					<p>1. Unparalleled & unbiased
+						<strong> information </strong> about properties helps our customers to filter out & shortlist right properties without stepping
+						out of home.</p>
+					<p>2. Our
+						<strong> unmatched </strong> range of properties listed in our platform helps customers to make wise decision.</p>
+					<p>3. Our addon services like online rental agreement,packers & movers and other home service make sure that shifting to
+						new place is never so easier than before.</p>
+				</div>
+				<div class="col-md-6 bottomgridimg">
+					<img src="images/about1.jpg" alt="">
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--// about -->
+
+	<!-- services -->
+	<div class="services" id="services">
+		<div class="banner-dott">
+			<div class="heading">
+				<h3>What we offer</h3>
+				<p>An Agent You Can Trust! </p>
+			</div>
+			<div class="container">
+				<div class="services-top-grids">
+					<div class="col-md-4">
+						<div class="grid1">
+							<i class="fa fa-money" aria-hidden="true"></i>
+							<h4>Rental Agreement</h4>
+							<p>We will deliver rental agreement at your door step. Our team collects necessary information from tenants & owner to
+								process the agreement & you don't need to step out of your home.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="grid1">
+							<i class="fa fa-building" aria-hidden="true"></i>
+							<h4>Packers and Movers</h4>
+							<p>We aggregate packers & movers service providers to get the best price for our customers.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="grid1">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<h4>Home Services</h4>
+							<p>We work with the best service providers in town. More the number of customers, helps us to negotiate better rates
+								with our partners. </p>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- <div class="services-bottom-grids">
+
+			<div class="clearfix"></div>
+		</div> -->
+			</div>
+		</div>
+	</div>
+	<!-- //services -->
+
+	<!-- faq's -->
+	<div class="faq">
+		<div class="container">
+			<div class="about-w3ls-row">
+				<div class="heading ">
+					<h3>Faq's</h3>
+				</div>
+				<div class="col-md-4 about-left">
+					<div class="about-w3layouts-pic">
+						<img src="images/faq.png" alt="" />
+					</div>
+				</div>
+				<div class="col-md-8 about-right">
+					<!-- history -->
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title asd">
+									<a class="pa_italic" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+									 aria-controls="collapseOne">
+										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> How to list properties ?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body panel_text">
+									If you are a landlord, kindly contact us @ +91-8105533553. Our team will visit your property for necessary information for
+									listing.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title asd">
+									<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+									 aria-controls="collapseTwo">
+										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> What are the charges?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body panel_text">
+									Customers can hire real estate agents at zero brokerage. We also have optional paid service in which we allocate resources
+									for individual customer request.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title asd">
+									<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+									 aria-controls="collapseThree">
+										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> Is this service available in all locations of Bangalore?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								<div class="panel-body panel_text">
+									Currently we serve only part of south Bangalore and plans to expand aggressively to other locations. You can still fill the
+									<strong> Form </strong> and let us know your preferred location, so that we can pick the right location for expansion.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingFour">
+								<h4 class="panel-title asd">
+									<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+									 aria-controls="collapseFour">
+										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> Do you have customer service?
+									</a>
+								</h4>
+							</div>
+							<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+								<div class="panel-body panel_text">
+									Of course! Our friendly and knowledgeable customer services reps are available to answer your questions 24/7/365.
+									<a class="scroll hvr-outline-in" href="#contact">Reach out to us</a>
+									</li>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //history -->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //faq's -->
+
+	<!-- contact -->
+	<div class="mail" id="contact">
+		<div class="mail-grid1">
+			<div class="container">
+				<div class="heading ">
+					<h3>Contact us</h3>
+				</div>
+				<div class="col-md-4 mail-agileits-w3layouts">
+					<i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
+					<div class="contact-right">
+						<p>Phone</p>
+						<span>+91-8105533553</span>
+					</div>
+				</div>
+				<div class="col-md-4 mail-agileits-w3layouts">
+					<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+					<div class="contact-right">
+						<p>Email</p>
+						<a href="mailto:hello@rentez.in">hello@rentez.in</a>
+					</div>
+				</div>
+				<div class="col-md-4 mail-agileits-w3layouts">
+					<i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+					<div class="contact-right">
+						<p>Address</p>
+						<span>Neeladri Nagar, Electronic city,
+							<br> Bangalore, Karnataka - 560100</span>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="map ">
+			<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26359195.17562375!2d-113.7156245614499!3d36.2473834534249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1452332634941"></iframe> -->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.064392825567!2d77.64522376418498!3d12.839115490942943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b7eccc38617%3A0x12fc4408cd49d40c!2sNeeladri+Nagar%2C+Electronics+City+Phase+1%2C+Electronic+City%2C+Bengaluru%2C+Karnataka+560100!5e0!3m2!1sen!2sin!4v1519721910698"></iframe>
+			<div class="mail-grid1-form ">
+				<h3 class="tittle-w3">
+					<span>Send a </span>Message</h3>
+				<form action="#" method="post">
+					<input type="text" name="Name" placeholder="Full Name" required="" />
+					<input type="email" name="Email" placeholder="Email" required="" />
+					<textarea name="Message" placeholder="Type Your Text Here...." required=""></textarea>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- //contact -->
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="social">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fa fa-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-twitter"></i>
+						</a>
+					</li>
+					<!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
+					<!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+				</ul>
+			</div>
+			<div class="border"></div>
+			<div class="agileits-w3layouts-copyright">
+				<p>© 2018 RentEz. All rights reserved | Design by
+					<a href="http://rentez.in/">RentEz</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+
+
+
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- //js -->
+
+
+	<!-- for banner js file-->
+	<script type="text/javascript" src="js/jquery.zoomslider.min.js"></script>
+	<!-- zoomslider js -->
+	<!-- //for banner js file-->
+
+	<!-- for team slider -->
+	<!-- requried-jsfiles-for owl -->
+	<script src="js/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo").owlCarousel({
+				items: 4,
+				lazyLoad: true,
+				autoPlay: true,
+				navigation: true,
+				navigationText: true,
+				pagination: false,
+			});
+		});
+	</script>
+	<!-- //requried-jsfiles-for owl -->
+	<!-- //for team slider -->
+
+	<!-- js for portfolio lightbox -->
+	<script src="js/jQuery.lightninBox.js"></script>
+	<script type="text/javascript">
+		$(".lightninBox").lightninBox();
+	</script>
+	<!-- /js for portfolio lightbox -->
+
+	<!-- for smooth scrolling -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- //for smooth scrolling -->
+
+	<!-- scrolling script -->
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- //scrolling script -->
+
+	<!-- range -->
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type='text/javascript'>//<![CDATA[
+		$(window).load(function () {
+			$("#slider-range").slider({
+				range: true,
+				min: 0,
+				max: 100000,
+				step: 500,
+				values: [0, 100000],
+				slide: function (event, ui) {
+					$("#amount").val("INR " + ui.values[0] + " - " + ui.values[1]);
+
+					// var step = $('#slider-range').slider('option', 'step');
+					// if (ui.values[0] < 10000) { $('#slider-range').slider('option', 'step', 500); }
+					// if (ui.values[0] > 50000) { $('#slider-range').slider('option', 'step', 5000); }
+					// if (ui.values[0] > 55000) { $('#slider-range').slider('option', 'step', 10000); }
+
+					// if (ui.values[1] > 55000) { $('#slider-range').slider('option', 'step', 10000); }
+					// if (ui.values[1] < 50000) { $('#slider-range').slider('option', 'step', 5000); }
+					// if (ui.values[1] < 10000) { $('#slider-range').slider('option', 'step', 500); }
+
+				}
+			});
+			$("#amount").val("INR " + $("#slider-range").slider("values", 0) + " - " + $("#slider-range").slider("values", 1));
+
+		});//]]>
+	</script>
+	<!-- //range -->
+
+	<!-- Location Autocomplete -->
+
+	<script>
+
+
+		function autocomplete(inp, arr) {
+			/*the autocomplete function takes two arguments,
+			the text field element and an array of possible autocompleted values:*/
+			var currentFocus;
+			/*execute a function when someone writes in the text field:*/
+			inp.addEventListener("input", function (e) {
+				var a, b, i, val = this.value;
+				/*close any already open lists of autocompleted values*/
+				closeAllLists();
+				if (!val) { return false; }
+				currentFocus = -1;
+				/*create a DIV element that will contain the items (values):*/
+				a = document.createElement("DIV");
+				a.setAttribute("id", this.id + "autocomplete-list");
+				a.setAttribute("class", "autocomplete-items");
+				/*append the DIV element as a child of the autocomplete container:*/
+				this.parentNode.appendChild(a);
+				/*for each item in the array...*/
+				for (i = 0; i < arr.length; i++) {
+					/*check if the item starts with the same letters as the text field value:*/
+					if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+						/*create a DIV element for each matching element:*/
+						b = document.createElement("DIV");
+						/*make the matching letters bold:*/
+						b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+						b.innerHTML += arr[i].substr(val.length);
+						/*insert a input field that will hold the current array item's value:*/
+						b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+						/*execute a function when someone clicks on the item value (DIV element):*/
+						b.addEventListener("click", function (e) {
+							/*insert the value for the autocomplete text field:*/
+							inp.value = this.getElementsByTagName("input")[0].value;
+							/*close the list of autocompleted values,
+							(or any other open lists of autocompleted values:*/
+							closeAllLists();
+						});
+						a.appendChild(b);
+					}
+				}
+			});
+			/*execute a function presses a key on the keyboard:*/
+			inp.addEventListener("keydown", function (e) {
+				var x = document.getElementById(this.id + "autocomplete-list");
+				if (x) x = x.getElementsByTagName("div");
+				if (e.keyCode == 40) {
+					/*If the arrow DOWN key is pressed,
+					increase the currentFocus variable:*/
+					currentFocus++;
+					/*and and make the current item more visible:*/
+					addActive(x);
+				} else if (e.keyCode == 38) { //up
+					/*If the arrow UP key is pressed,
+					decrease the currentFocus variable:*/
+					currentFocus--;
+					/*and and make the current item more visible:*/
+					addActive(x);
+				} else if (e.keyCode == 13) {
+					/*If the ENTER key is pressed, prevent the form from being submitted,*/
+					e.preventDefault();
+					if (currentFocus > -1) {
+						/*and simulate a click on the "active" item:*/
+						if (x) x[currentFocus].click();
+					}
+				}
+			});
+			function addActive(x) {
+				/*a function to classify an item as "active":*/
+				if (!x) return false;
+				/*start by removing the "active" class on all items:*/
+				removeActive(x);
+				if (currentFocus >= x.length) currentFocus = 0;
+				if (currentFocus < 0) currentFocus = (x.length - 1);
+				/*add class "autocomplete-active":*/
+				x[currentFocus].classList.add("autocomplete-active");
+			}
+			function removeActive(x) {
+				/*a function to remove the "active" class from all autocomplete items:*/
+				for (var i = 0; i < x.length; i++) {
+					x[i].classList.remove("autocomplete-active");
+				}
+			}
+			function closeAllLists(elmnt) {
+				/*close all autocomplete lists in the document,
+				except the one passed as an argument:*/
+				var x = document.getElementsByClassName("autocomplete-items");
+				for (var i = 0; i < x.length; i++) {
+					if (elmnt != x[i] && elmnt != inp) {
+						x[i].parentNode.removeChild(x[i]);
+					}
+				}
+			}
+			/*execute a function when someone clicks in the document:*/
+			document.addEventListener("click", function (e) {
+				closeAllLists(e.target);
+			});
+		}
+
+		/*An array containing all the country names in the world:*/
+		var countries = ["Aavalahalli", "Abbigere", "Adakamaranahalli", "Adugodi", "AECS Layout", "Akshayanagar", "Amrutha Halli", "Anagalapura", "Ananth Nagar", "Andrahalli", "Anekal", "Anjanapura", "Annapurneshwari Nagar", "Arasanakunte", "Arekere", "Ashirvad Colony", "Ashok Nagar", "Attibele", "Anekal Road",
+			"Attiguppe", "Azad Nagar", "B Narayanapura", "Babusa Palya", "Bagalakunte", "Bagaluru", "Bagepalli", "Baiyyappanahalli", "Balagere", "Ballur", "Banashankari", "Banashankari", "Banashankari 3rd Stage", "Banashankari 5th Stage", "Banaswadi", "Bangalore- Hyderabad Highway Road", "Bannerghatta", "Bannerghatta Jigani Road",
+			"Bannerghatta Road", "Bapuji Nagar", "Basapura", "Basavanagar", "Basavanagudi", "Basavanna Nagar", "Basaveshwara Nagar", "Battarahalli", "Begur", "Begur Road", "Belathur", "Belatur", "Bellandur", "Bellandur Outer Ring Road", "Bellary Road", "BEML Layout", "BEML Layout Raja Rajeshwari Nagar", "Bennigana Halli", "Benson", "Town",
+			"Bettahalasur", "Bhaktharahalli", "Bhoganhalli", "Bhoopasandra", "Bhovi Palya", "Bhuvaneshwari Nagar", "Bidadi", "Bidrahalli", "Bikasipura", "Bikkanahalli", "Bilekahalli", "Bileshivale", "Binny Pete", "Bommanahalli", "Bommasandra", "Bommenahalli", "Boyalahalli", "Brigade", "Road", "Brookefield",
+			"BTM Layout", "Budigere", "Budigere Road", "Budihal", "Byatarayanapura", "Bylkonehalli", "Byrathi", "Cambridge Layout", "Carmelaram", "Chadalapura", "Chamarajpet", "Chamundi Nagar", "Chandapura", "Chandapura", "Anekal Road", "Chandapura-Sarjapura Road", "Chandra Layout", "Chansandra", "Chelekare", "Chickpet",
+			"Chikbanavara", "Chikka Banaswadi", "Chikka Tirupathi", "Chikka Tirupathi Road", "Chikkaballapur", "Chikkaballapur-Gauribidanur Road", "Chikkabasavanapura", "Chikkabellandur", "Chikkabidarakallu", "Chikkagubbi Village", "Chikkajala", "Chikkakannalli", "Chikkalasandra", "Chikkanagamangala", "Chikkanahalli", "Chikkasagarahalli", "Chikkathoguru", "Chinnapa Garden", "Chinnapanna", "Halli",
+			"Chintamani", "Chokkanahalli", "Cholanayakanahalli", "Choodasandra", "Commercial Street", "Cooke Town", "Cottonpete", "Cox Town", "CQAL Layout", "Craig Park Layout", "Cunningham Road", "CV Raman Nagar", "Dabaspete", "Dasarahalli Hebbal", "Dasarahalli Main Road", "Dayananda Nagar", "Defence Colony -", "Bagalagunte", "Devanahalli", "Devanahalli Road",
+			"Devarachikkanahalli", "Devasthanagalu", "Devinagar", "Dodda Aalada Mara Road", "Dodda Banasvadi", "Doddaballapur", "Doddaballapur Road", "Doddabele", "Doddabommasandra", "Doddagubbi", "Doddakallasandra", "Doddakammanahalli", "Doddakannalli", "Doddathoguru", "Doddenahalli", "Doddenakundi", "Dodsworth", "Layout", "Dollars Colony", "Domlur",
+			"Dommasandra", "Donnenahalli", "Dooravani Nagar", "Ejipura", "Electronic City Phase I", "Electronic City Phase II", "Essel Gardens", "Frazer Town", "Ganapathihalli", "Gandhi Nagar", "Ganga Nagar", "Garden Layout", "Garudachar Palya", "Garvebhavi Palya", "Gattahalli", "Gauribidanur", "Girinagar", "GM Palya", "Gollahalli", "Gottigere",
+			"Gubalala", "Guddahatti", "Gunjur", "Gunjur Mugalur Road", "Guttahalli", "HAL Layout", "HAL Layout2", "Hancharahalli", "Hanumantha Nagar", "Haragadde", "Haralur Road", "Harlur", "Harohalli", "Haudin Road", "HBR Layout", "Hebbal", "Hebbal Kempapura", "Hegde Nagar", "Hemmigepura", "Hennur",
+			"Hennur Road", "Hesaraghatta", "HMT Layout", "Hombegowda Nagar", "Hongasandra", "Hoodi", "Horamavu", "Horamavu Agara", "Hosa", "Road", "Hosakerehalli", "Hosapalaya", "Hoskote", "Hoskote Malur Road", "Hosur Road", "HRBR Layout", "HSR Layout", "HSR Layout Sector 1", "HSR Layout Sector 2", "HSR Layout Sector 3",
+			"HSR Layout Sector 4", "HSR Layout Sector 5", "HSR Layout Sector 6", "HSR Layout Sector 7", "Hulimavu", "Hullahalli", "Huskur", "Huttanahalli", "Immadihalli", "Indira Nagar", "Infantry Road", "International Airport Road", "ISRO Layout", "ITPL Road", "IVC Road", "Jagadish Nagar", "Jagajeevanram Nagar", "Jakkasandra", "Jakkur", "Jakkuru Layout",
+			"Jalahalli Cross", "Jalahalli East", "Jalahalli West", "Jangamakote", "Jaya", "Chamarajendra Nagar", "Jayamahal", "Jayanagar", "Jeevanbheema Nagar", "Jigani", "Jigani Anekal Road", "Jnana Ganga Nagar", "JP Nagar", "JP", "Nagar Phase 1", "JP Nagar Phase 2", "JP Nagar Phase 3", "JP Nagar Phase 4", "JP Nagar Phase 5", "JP Nagar Phase 6",
+			"JP Nagar Phase 7", "JP Nagar Phase 8", "JP Nagar Phase 9", "Judicial Layout", "K Channasandra", "K R Puram", "Kacharakanahalli", "Kadabagere", "Kadubeesanahalli", "Kadugodi", "Kadugondanahalli", "Kadusonnappanahalli", "Kaggadasapura", "Kaggalipura", "kaikondrahalli", "Kal", "sipalayam", "Kalena Agrahara", "Kalkere", "Kalkunte",
+			"Kallahalli", "Kallumantapa", "Kalyan Nagar", "Kamaksipalya", "Kamala Nagar", "Kamanahalli", "Kambalipura", "Kambipura", "Kammanahalli", "Kammasandra", "Kammasandra Agrahara", "Kanaka Nagar", "Kanakapura", "Kanakapura Road", "Kannamangala", "Kartik Nagar", "Karuna Nagar", "Kasavanahalli", "Kasturi Nagar", "Kathriguppe",
+			"Kattigenahalli", "Kaval Byrasandra", "Kempapura", "Kempegowda Nagar", "Kengeri", "Kengeri Satellite Town", "Kithiganur", "Kodathi", "Kodichikkanahalli", "Kodigehalli", "Kodigehalli - KR Puram", "Kodihalli", "Kodipur", "Kogilu", "Kolar", "Road", "Kolar-Chikkaballapur Road", "Kommaghatta", "Konanakunte", "Konena Agrahara",
+			"Koppa", "Koralur", "Koramangala", "Kothanoor", "Kothanur", "Koti Hosahalli", "Kudlu", "Kudlu Gate", "Kumaraswamy Layout", "Kumbalgodu", "Kundalahalli", "Kunigal Road", "Kurudusonnenahalli", "Kuthaganahalli", "Laggere", "Lake City", "Lakshmamma Layout", "lal bagh", "Langford Road", "Langford Town",
+			"Lavelle Road", "LB Shastri Nagar", "Lingadheeranahalli", "Lingarajapuram", "Madhava Nagar", "Madiwala", "Magadi Road", "Mahadevapura", "Mahalakshmi Layout", "Majestic", "Mallathahalli", "Malleshpalya", "Malleshwaram", "Malur-Hosur Road", "Marathahalli", "Marathahalli ORR", "Marathahalli-Sarjapur Outer Ring Road", "Margondanahalli", "Maruthi Nagar (Madiwala)", "Maruthi Nagar (Yelahanka)",
+			"Maruthi Nagar", "Maruthi Sevanagar", "Masti - Malur Road", "Mathikere", "Mayaghanahalli", "Medihalli", "Meenakunte", "MG Road", "Mico Layout", "Millers Road", "MS Palya", "Munireddy Layout", "Munireddypalya", "Munnekollal", "Murugeshpalya", "Mysore Road", "Nagadevanahalli", "Nagarbhavi", "Nagarbhavi Circle", "Nagasandra",
+			"Nagavara", "Nagondanahalli", "Nallurhalli", "Nandi Hills", "Nandini Layout", "Nanjappa Garden", "Narasapura", "Narayanapura", "National Highway 207", "Nayanda Halli", "Neeladri Nagar", "Neelasandra", "Nehru Nagar", "Nelamangala", "Nelamangala - Chikkaballapura Road", "New BEL Road", "New Thippasandra", "Nobo", "Nagar", "NRI Layout",
+			"Off Sarjapur road", "Old Airport Road", "Old Madras Road", "OMBR Layout", "Outer Ring Road", "Padmanabha Nagar", "Pai Layout", "Palace Road", "Panathur", "Panduranga Nagar", "Pattandur Agrahara", "Pattegarhpalya", "Peenya", "Prashanth Nagar", "R.K. Hegde Nagar", "Race Course Road", "Rachenahalli", "Ragavendra Nagar", "Raghavendra Colony", "Raghuvanahalli",
+			"Raja Rajeshwari Nagar", "Rajaji Nagar", "Rajanukunte", "Rajiv Gandhi Nagar", "Ramagondanahalli", "Ramamurthy Nagar", "Ramohalli", "Rayasandra", "Residency Road", "Rest House Road", "Richard's Park", "Richards Town", "Richmond Road", "Richmond Town", "RMV", "RMV 2nd Stage", "RMV Extension", "Roopena Agrahara", "RT Nagar", "S.Medihalli",
+			"Sadashiva Nagar", "Sadduguntepalya", "Sahakara Nagar", "Sampangi Rama Nagar", "Sampigehalli", "Sanjay Nagar", "Sankey Road", "Sarjapur", "Sarjapur Attibele Road", "Sarjapur Bagalur Road", "Sarjapur Road", "Sathanur", "Seegehalli", "Seenappa Layout", "Seshadripuram", "Shankarapura", "Shanthala Nagar", "Shanthi Nagar", "Shanthi Pura", "Shettihalli",
+			"Shigehalli", "Shivaji Nagar", "Siddapura", "Sidlaghatta", "Silk Board", "Silver Springs Layout", "Singanahalli", "Singasandra", "SMV Layout", "Solur", "Somashetti Halli", "Sompura", "Sonnenahalli", "Soukya Road", "Soundarya Layout", "Srinagar", "Srinivasa Nagar", "Srirampura", "St. Johns Road", "Subramanyapura",
+			"Sudhama Nagar", "Sulikere", "Sunkadakatte", "Suryanagar", "T Dasarahalli", "Talaghattapura", "Tavarekere-BTM", "TC Palya Road", "Teacher's Colony", "Thanisandra", "Thanisandra Main Road", "Tharaballi", "Tharabanahalli", "Thavarekere-Magadi Road", "Thippasandra", "Thubarahalli", "Thurahalli", "Tilak Nagar", "Tippenahalli", "Tumkur Road",
+			"Ullal", "Ulsoor", "Uttarahalli", "Uttarahalli", "Uttarahalli Main Road", "Vaderahalli", "Varthur", "Varthur Road", "Vasanth Nagar", "Vasanthapura", "Veerannapalya", "Vehloli", "Venkatagiri Kote", "Venkatapura", "Venkateshpuram", "Victoria Layout", "Vidyaranyapura", "Vignana Nagar", "Vijaya", "Bank Colony",
+			"Vijayanagar", "Vijaypura", "Vinayaka Layout", "Virupakshapura", "Vishweshwaraiah Layout", "Vittal Mallya Road", "Vittal Nagar", "Viveka", "Nagar", "Weavers Colony", "Wheeler Road", "Whitefield", "Whitefield Road", "Williams Town", "Wilson Garden", "Wind Tunnel Road", "Yarandahalli", "Yelachena Halli", "Yelahanka", "Yelahanka New Town",
+			"Yelanahalli", "Yemalur", "Yeshwanthpur"];
+
+
+		/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+		autocomplete(document.getElementById("myInput"), countries);
+
+		// $('#myInput').val(localStorage.getItem("location"));
+
+	</script>
+
+	<!-- End of Loaction Autocomplete -->
+
+
+	<script src="js/checkBox.js"> </script>
+
+	<!-- DB Update -->
+
+
+	<script>
+
+		function getState(chkName) {
+
+			var str = "";
+
+			$("input:checkbox[name=" + chkName + "]:checked").each(function () {
+				str = str.concat($(this).val(), ', ');
+			});
+
+			return str;
+
+		}
+
+
+		function validateForm() {
+			var x = document.forms["dash-form"]["location"].value;
+
+			if (x == "") {
+				alert("Please select a locality from the dropdown for searching a property");
+				return false;
+			}
+			else {
+
+				var a = document.getElementById("amount").value;
+				var type = getState("pType");
+
+				var location = localStorage.setItem("location", x);
+				var pRange = localStorage.setItem("amount", a);
+				var pType = localStorage.setItem("proType", type);
+				var isStartClick = localStorage.setItem("isStartClick", "1");
+
+				return true;
+
+				// fun();
+			}
+		}
+
+		function fun() {
+
+			if (validateForm()) {
+				// document.getElementById('tmp').innerHTML = "proType";
+
+				// alert("location: "+localStorage.getItem("location")+ "pRange: "+localStorage.getItem("amount")
+				// +"isStart: "+localStorage.getItem("isStartClick"));
+
+				window.location = "app_login/login.html";
+
+				return false;
+
+				// document.getElementById('tmp').innerHTML = 'out call';
+
+			}
+			else {
+				return false;
+			}
+		}
+
+	</script>
+	<!-- End of DB Update -->
+
+	<!-- End of DB Update -->
+
+
+</body>
+
+</html>
