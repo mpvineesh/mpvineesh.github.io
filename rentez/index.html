@@ -153,24 +153,24 @@
                                                 <div class="col-md-12">
                                                    <label for="destination">Property Type</label>
                                                    <span class="button-checkbox">
-                                                   <button type="button" class="btn btn-sm btn-default" data-color="green">Apartment</button>
-                                                   <input type="checkbox" id="pType" name="pType" class="hidden" value="Apartment" />
+                                                     <button type="button" class="btn btn-sm btn-default" data-color="green">Apartment</button>
+                                                     <input type="checkbox" id="pType" name="pType" class="hidden" value="Apartment" />
                                                    </span>
                                                    <span class="button-checkbox">
-                                                   <button type="button" class="btn btn-sm btn-default" data-color="green">Luxury Apartment</button>
-                                                   <input type="checkbox" id="pType" name="pType" class="hidden" value="Luxury Apartment" />
+                                                     <button type="button" class="btn btn-sm btn-default" data-color="green">Luxury Apartment</button>
+                                                     <input type="checkbox" id="pType" name="pType" class="hidden" value="Luxury Apartment" />
                                                    </span>
                                                    <span class="button-checkbox">
-                                                   <button type="button" class="btn btn-sm btn-default" data-color="green">Independent Villa</button>
-                                                   <input type="checkbox" id="pType" name="pType" class="hidden" value="Independent Villa/House" />
+                                                     <button type="button" class="btn btn-sm btn-default" data-color="green">Independent Villa</button>
+                                                     <input type="checkbox" id="pType" name="pType" class="hidden" value="Independent Villa/House" />
                                                    </span>
                                                    <span class="button-checkbox">
-                                                   <button type="button" class="btn btn-sm btn-default" data-color="green">PG/Hostel</button>
-                                                   <input type="checkbox" id="pType" name="pType" class="hidden" value="PG/Hostel" />
+                                                     <button type="button" class="btn btn-sm btn-default" data-color="green">PG/Hostel</button>
+                                                     <input type="checkbox" id="pType" name="pType" class="hidden" value="PG/Hostel" />
                                                    </span>
                                                    <span class="button-checkbox">
-                                                   <button type="button" class="btn btn-sm btn-default" data-color="green">Independent Floor/Bulder Floor</button>
-                                                   <input type="checkbox" id="pType" name="pType" class="hidden" value="Independent Floor/Builder" />
+                                                     <button type="button" class="btn btn-sm btn-default" data-color="green">Independent Floor/Bulder Floor</button>
+                                                     <input type="checkbox" id="pType" name="pType" class="hidden" value="Independent Floor/Builder" />
                                                    </span>
                                                 </div>
                                              </div>
@@ -498,6 +498,7 @@
       <script src="js/SmoothScroll.min.js"></script>
       <script type="text/javascript" src="js/move-top.js"></script>
       <script type="text/javascript" src="js/easing.js"></script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
       <!-- here stars scrolling icon -->
       <script type="text/javascript">
          $(document).ready(function () {
@@ -693,8 +694,8 @@
       <script src="js/checkBox.js"> </script>
       <!-- DB Update -->
     <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
 
       <script src="js/firebase/init.js"></script>
       <script type="text/javascript">
@@ -759,6 +760,14 @@
             //TODO : Add code if user is not logged in
          		//window.location = "index-guest.html";
          	}
+          if (user) {
+            document.getElementById('sign-in-status').textContent = 'Signed in';
+            document.getElementById('account-details').textContent = JSON.stringify(user, null, '  ');
+          } else {
+            document.getElementById('sign-in-status').textContent = 'Signed out';
+            document.getElementById('account-details').textContent = 'null';
+          }
+
          }
 
             /**
@@ -943,7 +952,8 @@
            // Event bindings.
            document.getElementById('sign-out-button').addEventListener('click', onSignOutClick);
            //document.getElementById('sign-in-button').addEventListener('click', onSignInSubmit);
-           document.getElementById('phone-number').addEventListener('keyup', updateSignInButtonUI);
+           //document.getElementById('phone-number').addEventListener('keyup', updateSignInButtonUI);
+           document.getElementById('phone-number').addEventListener('keyup', retainPrefix);
            document.getElementById('phone-number').addEventListener('change', updateSignInButtonUI);
 
            document.getElementById('name').addEventListener('keyup', updateSignInButtonUI);
@@ -969,7 +979,16 @@
              updateSignInButtonUI();
            });
          };
-
+        function retainPrefix(){
+            var oldvalue='+91';
+            var currentValue=$('#phone-number').val();
+            setTimeout(function () {
+              if(currentValue.indexOf('+91') !== 0) {
+                $('#phone-number').val(oldvalue);
+              }
+            }, 1);
+            updateSignInButtonUI();
+        }
          /**
           * Function called when clicking the Login/Logout button.
           */
@@ -1065,6 +1084,9 @@
           */
          function onSignOutClick() {
            firebase.auth().signOut();
+           $(".login-link").show();
+           $(".logout-link").hide();
+          document.getElementById('uname').innerHTML = 'Hi,';
          }
 
          /**
@@ -1193,7 +1215,28 @@
 
              var isStart = localStorage.getItem("isStartClick");
              // alert("isStart: " +isStart);
+             $("#login-form").modal("hide");
+             $(".login-link").hide();
+             $(".logout-link").show();
+             firebase.auth().onAuthStateChanged(function (user) {
+               if (user) {
+                 document.getElementById('uname').innerHTML = 'Hi, ' + user.displayName;
+                 // User is signed in.
+                 var uid = user.uid;
+                 var email = user.email;
+                 var photoURL = user.photoURL;
+                 var phoneNumber = user.phoneNumber;
+                 var isAnonymous = user.isAnonymous;
+                 var displayName = user.displayName;
+                 var providerData = user.providerData;
+                 var emailVerified = user.emailVerified;
+               }
+               updateSignedInUserStatusUI();
+             });
 
+             window.location = "../preference-page/user-preference.html";
+
+             /*
              if (isStart == 1) {
                // alert("in If");
                localStorage.removeItem("isStartClick");
@@ -1201,7 +1244,7 @@
              }
              else {
                window.location = "../index.html";
-             }
+             }*/
            } else {
              document.getElementById('sign-out-button').style.display = 'none';
            }
@@ -1210,16 +1253,7 @@
          /**
           * Updates the Signed in user status panel.
           */
-         function updateSignedInUserStatusUI() {
-           var user = firebase.auth().currentUser;
-           if (user) {
-             document.getElementById('sign-in-status').textContent = 'Signed in';
-             document.getElementById('account-details').textContent = JSON.stringify(user, null, '  ');
-           } else {
-             document.getElementById('sign-in-status').textContent = 'Signed out';
-             document.getElementById('account-details').textContent = 'null';
-           }
-         }
+
        </script>
    </body>
 </html>
