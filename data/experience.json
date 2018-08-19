@@ -1,24 +1,28 @@
 {
 "data" : [
 	{
+	"company" : "LG Electronics",
+		"designation": "Senior System Analyst",
+		"duration" :"April 2018 - Till Present",
+		"roles" :["Develop React JS Applications", "Enact JS Application Development", "Story Point and time estimation","Smart TV application development","Develop new modules/add features to existing application as per client requirment","Client communication and attend daily meetings","Create and distribute reports to appropriate personal."]	
+	},
+	{
 	"company" : "Sapient",
     "designation": "Senior Software Developer",
-    "duration" :"May 2017 - Present",
-    "roles" :["Requirement Analysis, Project planning, story point estimation and hour estimation","Planning and developing project plan","Develop new modules/add features to existing application as per client requirment","Client communication and attend daily meetings","Create and distribute reports to appropriate personal."]	
-    },
+    "duration" :"May 2017 - April 2018",
+    "roles" :["Requirement Analysis, Project planning, story point estimation and hour estimation","Planning and developing project plan","Develop new modules/add features to existing application as per client requirment","Client communication and attend daily meetings","Create and distribute reports to appropriate personal."]
+  },
 	{
 	"company" : "Neologix",
     "designation": "Project Lead",
     "duration" :"May 2014 - July 2016",
-     "roles" :["Plan, coordinate and conduct multiple complex software engineering activities","Planning and developing project plan","Inspire, motivate and influence the team members","Code review","Ensuring team members are adhere with all coding standards and guidelines","Manage version handling like code merging, pushing etc","Ensure team is always working on the highest priority work and is aware of the priority","Participate in development activities","Client communication"]	
-    },
+     "roles" :["Plan, coordinate and conduct multiple complex software engineering activities","Planning and developing project plan","Inspire, motivate and influence the team members","Code review","Ensuring team members are adhere with all coding standards and guidelines","Manage version handling like code merging, pushing etc","Ensure team is always working on the highest priority work and is aware of the priority","Participate in development activities","Client communication"]
+  },
 	{
 	"company" : "Neologix",
     "designation": "Software Developer",
     "duration" :"June 2011 - April 2014",
-   "roles" :["Analysing the requirements and reviewing existing system","Suggesting new ideas and solutions","Working with analysts, BA and QA teams","Development activities and unit testing","Create and distribute reports to appropriate personal."]	
-    }
-	
+   "roles" :["Analysing the requirements and reviewing existing system","Suggesting new ideas and solutions","Working with analysts, BA and QA teams","Development activities and unit testing","Create and distribute reports to appropriate personal."]	    }
+
 	]
 }
-
