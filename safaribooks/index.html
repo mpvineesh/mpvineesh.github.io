@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://devdocs.io/angular/guide/setup-systemjs-anatomy -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="./css/style.css" data-alt="//cdn.devdocs.io/assets/application-dark-4b28e7ca9f7ee5818e16b9f963eac245e79dfe9e12c9affc8ed823c90dcf3a83.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   </head>
+   <body class="">
+		<div class="">
+			<form class="_search" role="search"> 
+				<input type="text" name="q" class="_search-input input-text" aria-label="Search" id="bookLink" style="width:90%;float:left;" placeholder="Paste the book link">
+				<button type="button" class="btn btn-primary" style="float:left;margin-left:5px;" id="copyData">Submit</button>
+			</form>
+		</div>
+		<main class="_content" role="main">
+		<ol class="detail-toc">
+		</ol>
+	  
+		</main>
+		<main class="main-content-temp" role="main"></main>
+		<main class="main-content" role="main"></main>
+		
+		<style data-size="20rem" data-resizer="">
+			 ._container { margin-left: 0px; }
+			 ._header, ._list { width: 260px; }
+			 ._list-hover.clone { min-width: 260px; }
+			 ._notice, ._path, ._resizer { left: 260px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#copyData").click(function(){
+					var link = $("#bookLink").val();
+					$.ajax({
+					   url:link,
+					   type:'GET',
+					   success: function(data){
+						   $('.detail-toc').html($(data).find('.detail-toc').html());
+						   startCopy();
+					   }
+					}); 
+				});
+				function startCopy(){		
+					var arrChapters = [];
+					var chapter={};
+					var index = 1;
+					$('.detail-toc').find('*').each(function() { 
+					  var tag = $(this).prop("tagName");
+					 if(tag == 'A'){
+						var link = 'https://www.safaribooksonline.com'+$(this).attr('href');
+						var linkPage = link.split('/');
+						linkPage = linkPage[linkPage.length-1];
+						linkPage = linkPage.split('.')[0];
+						var text = $(this).html();
+						if(link.indexOf('#') == -1){
+							arrChapters.push(linkPage);
+							$.ajax({
+							   url:link,
+							   type:'GET',
+							   success: function(data){
+								   $('.main-content-temp').append('<div class="'+linkPage+'">'+$(data).find('#sbo-rt-content').html()+'</div>');
+								  
+							   }
+							}); 							
+						}						
+					  }
+					});
+					setTimeout(function(){
+						arrChapters.forEach(function(element){
+							var content = $('.'+element).html();
+							 $('.main-content').append('<div class="'+element+'">'+content+'</div>');		
+							console.log('re-render: '+element);			
+						})
+						 $('.main-content-temp').html('');
+					}, 10000);
+					
+					
+				}
+				function getChilds(el){		
+					
+					$('.detail-toc').children().each(function() {
+					  var $this = $(this);
+					  var tag = $(this).prop("tagName");
+					  console.log(tag);
+					  //var item = { id: $this.attr('value'), title: $this.html() };
+					 // items.push(item);
+					});
+				}
+			});
+		</script>
+   </body>
+</html>

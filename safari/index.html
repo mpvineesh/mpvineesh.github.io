@@ -1,92 +1,136 @@
 <!DOCTYPE html>
-<!-- saved from url=(0054)http://devdocs.io/angular/guide/setup-systemjs-anatomy -->
-<html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <link rel="stylesheet" href="./css/style.css" data-alt="//cdn.devdocs.io/assets/application-dark-4b28e7ca9f7ee5818e16b9f963eac245e79dfe9e12c9affc8ed823c90dcf3a83.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   </head>
-   <body class="">
-		<div class="">
-			<form class="_search" role="search"> 
-				<input type="text" name="q" class="_search-input input-text" aria-label="Search" id="bookLink" style="width:90%;float:left;" placeholder="Paste the book link">
-				<button type="button" class="btn btn-primary" style="float:left;margin-left:5px;" id="copyData">Submit</button>
-			</form>
+<html lang="en">
+<head>
+	<title>Coming Soon 6</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/countdowntime/flipclock.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="bg-img1 size1 overlay1 p-t-24" style="background-image: url('images/bg01.jpg');">
+		<div class="flex-w flex-sb-m p-l-80 p-r-74 p-b-175 respon5">
+			<div class="wrappic1 m-r-30 m-t-10 m-b-10">
+				<a href="#"><img src="images/icons/logo.png" alt="LOGO"></a>
+			</div>
+
+			<div class="flex-w m-t-10 m-b-10">
+				<a href="#" class="size3 flex-c-m how-social trans-04 m-r-6">
+					<i class="fa fa-facebook"></i>
+				</a>
+
+				<a href="#" class="size3 flex-c-m how-social trans-04 m-r-6">
+					<i class="fa fa-twitter"></i>
+				</a>
+
+				<a href="#" class="size3 flex-c-m how-social trans-04 m-r-6">
+					<i class="fa fa-youtube-play"></i>
+				</a>
+			</div>
 		</div>
-		<main class="_content" role="main">
-		<ol class="detail-toc">
-		</ol>
-	  
-		</main>
-		<main class="main-content-temp" role="main"></main>
-		<main class="main-content" role="main"></main>
+
+		<div class="flex-w flex-sa p-r-200 respon1">
+			<div class="p-t-34 p-b-60 respon3">
+				<p class="l1-txt1 p-b-10 respon2">
+					Our website is
+				</p>
+
+				<h3 class="l1-txt2 p-b-45 respon2 respon4">
+					Coming Soon
+				</h3>
+
+				<div class="cd100"></div>
+
+			</div>
+
+			<div class="bg0 wsize1 bor1 p-l-45 p-r-45 p-t-50 p-b-18 p-lr-15-sm">
+				<h3 class="l1-txt3 txt-center p-b-43">
+					Newsletter
+				</h3>
+
+				<form class="w-full validate-form">
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Name is required">
+						<input class="input100 placeholder0 s1-txt1" type="text" name="name" placeholder="Name">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-20" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100 placeholder0 s1-txt1" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<button class="flex-c-m size2 s1-txt2 how-btn1 trans-04">
+						Subscribe
+					</button>
+				</form>
+
+				<p class="s1-txt3 txt-center p-l-15 p-r-15 p-t-25">
+					And don’t worry, we hate spam too! You can unsubcribe at anytime.
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/flipclock.min.js"></script>
+	<script src="vendor/countdowntime/moment.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script>
+		$('.cd100').countdown100({
+			/*Set Endtime here*/
+			/*Endtime must be > current time*/
+			endtimeYear: 0,
+			endtimeMonth: 0,
+			endtimeDate: 35,
+			endtimeHours: 18,
+			endtimeMinutes: 0,
+			endtimeSeconds: 0,
+			timeZone: "" 
+			// ex:  timeZone: "America/New_York"
+			//go to " http://momentjs.com/timezone/ " to get timezone
+		});
+
 		
-		<style data-size="20rem" data-resizer="">
-			 ._container { margin-left: 0px; }
-			 ._header, ._list { width: 260px; }
-			 ._list-hover.clone { min-width: 260px; }
-			 ._notice, ._path, ._resizer { left: 260px; }
-		</style>
-		<script>
-			$(document).ready(function(){
-				$("#copyData").click(function(){
-					var link = $("#bookLink").val();
-					$.ajax({
-					   url:link,
-					   type:'GET',
-					   success: function(data){
-						   $('.detail-toc').html($(data).find('.detail-toc').html());
-						   startCopy();
-					   }
-					}); 
-				});
-				function startCopy(){		
-					var arrChapters = [];
-					var chapter={};
-					var index = 1;
-					$('.detail-toc').find('*').each(function() { 
-					  var tag = $(this).prop("tagName");
-					 if(tag == 'A'){
-						var link = 'https://www.safaribooksonline.com'+$(this).attr('href');
-						var linkPage = link.split('/');
-						linkPage = linkPage[linkPage.length-1];
-						linkPage = linkPage.split('.')[0];
-						var text = $(this).html();
-						if(link.indexOf('#') == -1){
-							arrChapters.push(linkPage);
-							$.ajax({
-							   url:link,
-							   type:'GET',
-							   success: function(data){
-								   $('.main-content-temp').append('<div class="'+linkPage+'">'+$(data).find('#sbo-rt-content').html()+'</div>');
-								  
-							   }
-							}); 							
-						}						
-					  }
-					});
-					setTimeout(function(){
-						arrChapters.forEach(function(element){
-							var content = $('.'+element).html();
-							 $('.main-content').append('<div class="'+element+'">'+content+'</div>');		
-							console.log('re-render: '+element);			
-						})
-						 $('.main-content-temp').html('');
-					}, 10000);
-					
-					
-				}
-				function getChilds(el){		
-					
-					$('.detail-toc').children().each(function() {
-					  var $this = $(this);
-					  var tag = $(this).prop("tagName");
-					  console.log(tag);
-					  //var item = { id: $this.attr('value'), title: $this.html() };
-					 // items.push(item);
-					});
-				}
-			});
-		</script>
-   </body>
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
 </html>
