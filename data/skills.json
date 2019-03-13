@@ -5,19 +5,29 @@
 	"skills":
 	 [
 		{
-		"name" : "Coldfusion",
+		"name" : "React JS",
 		"level": "Expert",
 		"percentage" :"70"
 		},
-		 {
+		{
 		"name" : "Javascript/JQuery",
 		"level": "Expert",
 		"percentage" :"60"
-		},		
+		},
+		{
+		"name" : "Node",
+		"level": "Intermediate",
+		"percentage" :"60"
+		},			
 		{
 		"name" : "Angular 2/4",
 		"level": "Intermediate",
 		"percentage" :"60"
+		},
+		{
+		"name" : "Coldfusion",
+		"level": "Expert",
+		"percentage" :"70"
 		},
 		{
 		"name" : "Java",
@@ -40,7 +50,7 @@
 		"percentage" :"55"
 		},
 		{
-		"name" : "Node/MongoDB/Express",
+		"name" : "MongoDB",
 		"level": "Beginner",
 		"percentage" :"30"
 		},
