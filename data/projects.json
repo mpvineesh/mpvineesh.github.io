@@ -2,7 +2,7 @@
   "data": [
     {
         "title": "Oracle Business Process Automation",
-        "summary": "The application 'Oracle Process Automation' is used for Business Process Management (BPM). The application contains 2 main modules (Process Designer and Process Runtime). The "Process Designer" module is used to design the process flows and the "Process Runtime" modules allows to execute the process instances.",
+        "summary": "The application 'Oracle Process Automation' is used for Business Process Management (BPM). The application contains 2 main modules (Process Designer and Process Runtime). The 'Process Designer' module is used to design the process flows and the 'Process Runtime' modules allows to execute the process instances.",
         "technologies": [
           "Javascript",
           "Node JS",
