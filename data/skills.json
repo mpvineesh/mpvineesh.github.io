@@ -3,14 +3,14 @@
     "summary": "I have project experience in Javascript, React JS,  MSSQL Server, Angular 2/4, jQuery, CSS etc. 5 years of experiencein web development",
     "skills": [
       {
+        "name": "Javascript/JQuery",
+        "level": "Expert",
+        "percentage": "75"
+      },
+      {
         "name": "React JS",
         "level": "Expert",
         "percentage": "70"
-      },
-      {
-        "name": "Javascript/JQuery",
-        "level": "Expert",
-        "percentage": "60"
       },
       {
         "name": "Node",
