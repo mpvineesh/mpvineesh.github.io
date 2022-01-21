@@ -1,49 +1,122 @@
 {
-"data" : [
-	{
-	"title" : "Priority Pass",
-    "summary": "Priority Pass is providing frequent travelers with independent airport lounge access worldwide. Millions of Members across more than 130 countries are enjoying texperience envisaged by priority pass over two decades ago. Priority Pass has three different membership plans to suit all types of traveler - Standard, Standard Plus and Prestige.",
-    "technologies" :["Coldfusion","Node JS","Angular","Javascript","JQuery","SQL","CSS","HTML5"],
-    "teamSize" :"20",
-    "duration" :"May 2017 - Present",
-    "role" :"Backend Developer",
-    "company" :"Sapient",
-    "link" :"http://www.kada.in",
-	"responsibilities":"Create and estimate stories/tasks, Development of new modules/features as per client request"
+  "data": [
+    {
+        "title": "Oracle Business Process Automation",
+        "summary": "The application 'Oracle Process Automation' is used for Business Process Management (BPM). The application contains 2 main modules (Process Designer and Process Runtime). The "Process Designer" module is used to design the process flows and the "Process Runtime" modules allows to execute the process instances.",
+        "technologies": [
+          "Javascript",
+          "Node JS",
+          "Oracle JET",
+          "CSS",
+          "HTML5",
+          "JQuery",
+          "QML"
+        ],
+        "teamSize": "15",
+        "duration": "August 2019 - Till Present",
+        "role": "Software Developer",
+        "company": "Oracle",
+        "responsibilities": "Create and estimate stories/tasks, Development of new modules/features as per client request"
     },
-	{
-	"title" : "Assetnation",
-    "summary": "EquipmentOne is a secure online auction marketplace operated by Ritchie Bros., the world's largest seller of used equipment and trucks. EquipmentOne is a no-games, hassle-free way to buy and sell used equipment, trucks and materials online. Buyers can browse listings, place bids and negotiate safely online, knowing they are backed by EquipmentOne's Total Buyer Protection. Sellers can easily list items for sale, with detailed descriptions and unlimited photos that attract serious bids.",
-    "technologies" :["Java"," REST APIs"," Railo/Lucee"," SQL Server"," HTML"," Javascript"," Ajax"," JQuery","Coldbox"],
-    "teamSize" :"40",
-    "duration" :"July 2016",
-    "role" :"System Analyst",
-    "company" :"Neologix",
-    "link" :"http://www.kada.in",
-	"responsibilities":"Create and estimate stories/tasks, Development of new modules/features as per client request"
+    {
+        "title": "Interactive Digital Board",
+        "summary": "The LG Interactive Digital Board(IDB), powered by IDB app, is the optimal solution to meet the requirements of all spaces where meetings might take place. IDB App is developed in Qt/QML on top of webOS. All the required services are written in nodejs. Users can share their live content to IDB using the mobile app developed in react native.",
+        "technologies": [
+          "Javascript",
+          "Node JS",
+          "React JS",
+          "CSS",
+          "HTML5",
+          "React Native",
+          "JQuery",
+          "QML"
+        ],
+        "teamSize": "4",
+        "duration": "May 2018 - August 2019",
+        "role": "Software Developer",
+        "company": "LG",
+        "responsibilities": "Create and estimate stories/tasks, Development of new modules/features as per client request"
     },
-	{
-	"title" : "Lumens",
-    "summary": "An E-Learning as well as E-Commerce site now versioning at 7.2 primarily developed by Augusoft Inc ,USA. The site is rich with its features like reports, Class Course Management, Financial management, online payment methods etc. More than 4 versions are now in market. About 200 Universities all over USA is using this web application for their whole administration. Payment gateways including USA Epay, Touchnet, Moneris, WV Epay , Cashnet and Authorize.net are integrated for this application. Still developments for future versions are going on",
-    "technologies" :["Java"," Coldfusion"," Webservices"," SQL Server"," HTML"," Javascript"," Ajax"," JQuery","Fusebox"],
-    "teamSize" :"40",
-    "duration" :"July 2016",
-    "role" :"Senior Software Developer, Team Lead",
-    "company" :"Neologix",
-    "link" :"http://www.kada.in",
-	"responsibilities":"Development of new modules/features as per client request, Maintenance and bug fixing, Code base handling."
-    },
-	{
-	"title" : "Kada.in",
-    "summary": "Kada Online Private Limited is Kerala’s first and largest online grocery store. KADA was founded in 2012 and currently caters to the entire city of Trivandrum. KADA focuses on providing its services to TIER 2 and TIER 3 cities in South India. Kada.in has web, ios and android platforms. I have worked as android developer for the Android App feature enhancements projects. Also developed billing application for this application, which is a hybrid android app. For the web platform I have worked as a team lead. Implemented coupon functionality in web platform.",
-    "technologies" :["Java","Android"," PHP"," MySql"," JQuery"," Javascript"],
-    "teamSize" :"2",
-    "duration" :"July 2016",
-    "link" :"http://www.kada.in",
-    "role" :"Senior Software Developer, Team Lead",
-    "company" :"Neologix",
-	"responsibilities":"Development of new modules/features as per client request, Maintenance and bug fixing, Code base handling."
-    }
-	]
-}
 
+    {
+      "title": "Priority Pass",
+      "summary": "Priority Pass is providing frequent travelers with independent airport lounge access worldwide. Millions of Members across more than 130 countries are enjoying texperience envisaged by priority pass over two decades ago. Priority Pass has three different membership plans to suit all types of traveler - Standard, Standard Plus and Prestige.",
+      "technologies": [
+        "Coldfusion",
+        "Node JS",
+        "Angular",
+        "Javascript",
+        "JQuery",
+        "SQL",
+        "CSS",
+        "HTML5"
+      ],
+      "teamSize": "20",
+      "duration": "May 2017 - April 2018",
+      "role": "Backend Developer",
+      "company": "Sapient",
+      "link": "https://www.prioritypass.com/",
+      "responsibilities": "Create and estimate stories/tasks, Development of new modules/features as per client request"
+    },
+    {
+      "title": "Assetnation",
+      "summary": "EquipmentOne is a secure online auction marketplace operated by Ritchie Bros., the world's largest seller of used equipment and trucks. EquipmentOne is a no-games, hassle-free way to buy and sell used equipment, trucks and materials online. Buyers can browse listings, place bids and negotiate safely online, knowing they are backed by EquipmentOne's Total Buyer Protection. Sellers can easily list items for sale, with detailed descriptions and unlimited photos that attract serious bids.",
+      "technologies": [
+        "Java",
+        " REST APIs",
+        " Railo/Lucee",
+        " SQL Server",
+        " HTML",
+        " Javascript",
+        " Ajax",
+        " JQuery",
+        "Coldbox"
+      ],
+      "teamSize": "40",
+      "duration": "July 2016",
+      "role": "System Analyst",
+      "company": "Neologix",
+      "link": "",
+      "responsibilities": "Create and estimate stories/tasks, Development of new modules/features as per client request"
+    },
+    {
+      "title": "Lumens",
+      "summary": "An E-Learning as well as E-Commerce site now versioning at 7.2 primarily developed by Augusoft Inc ,USA. The site is rich with its features like reports, Class Course Management, Financial management, online payment methods etc. More than 4 versions are now in market. About 200 Universities all over USA is using this web application for their whole administration. Payment gateways including USA Epay, Touchnet, Moneris, WV Epay , Cashnet and Authorize.net are integrated for this application. Still developments for future versions are going on",
+      "technologies": [
+        "Java",
+        " Coldfusion",
+        " Webservices",
+        " SQL Server",
+        " HTML",
+        " Javascript",
+        " Ajax",
+        " JQuery",
+        "Fusebox"
+      ],
+      "teamSize": "40",
+      "duration": "July 2016",
+      "role": "Senior Software Developer, Team Lead",
+      "company": "Neologix",
+      "link": "http://www.kada.in",
+      "responsibilities": "Development of new modules/features as per client request, Maintenance and bug fixing, Code base handling."
+    },
+    {
+      "title": "Kada.in",
+      "summary": "Kada Online Private Limited is Kerala’s first and largest online grocery store. KADA was founded in 2012 and currently caters to the entire city of Trivandrum. KADA focuses on providing its services to TIER 2 and TIER 3 cities in South India. Kada.in has web, ios and android platforms. I have worked as android developer for the Android App feature enhancements projects. Also developed billing application for this application, which is a hybrid android app. For the web platform I have worked as a team lead. Implemented coupon functionality in web platform.",
+      "technologies": [
+        "Java",
+        "Android",
+        " PHP",
+        " MySql",
+        " JQuery",
+        " Javascript"
+      ],
+      "teamSize": "2",
+      "duration": "July 2016",
+      "link": "http://www.kada.in",
+      "role": "Senior Software Developer, Team Lead",
+      "company": "Neologix",
+      "responsibilities": "Development of new modules/features as per client request, Maintenance and bug fixing, Code base handling."
+    }
+  ]
+}
