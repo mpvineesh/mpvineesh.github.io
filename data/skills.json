@@ -1,64 +1,57 @@
 {
-"data" :{
-
-	"summary":"I have project experience in Coldfusion, MSSQL Server, Javascript,Angular 2/4, jQuery, CSS etc. 5 years of experiencein web development",
-	"skills":
-	 [
-		{
-		"name" : "React JS",
-		"level": "Expert",
-		"percentage" :"70"
-		},
-		{
-		"name" : "Javascript/JQuery",
-		"level": "Expert",
-		"percentage" :"60"
-		},
-		{
-		"name" : "Node",
-		"level": "Intermediate",
-		"percentage" :"60"
-		},			
-		{
-		"name" : "Angular 2/4",
-		"level": "Intermediate",
-		"percentage" :"60"
-		},
-		{
-		"name" : "Coldfusion",
-		"level": "Expert",
-		"percentage" :"70"
-		},
-		{
-		"name" : "Java",
-		"level": "Beginner",
-		"percentage" :"20"
-		},		
-		{
-		"name" : "CSS3",
-		"level": "Intermediate",
-		"percentage" :"45"
-		},
-		{
-		"name" : "HTML5",
-		"level": "Intermediate",
-		"percentage" :"45"
-		},
-		{
-		"name" : "SQL",
-		"level": "Intermediate",
-		"percentage" :"55"
-		},
-		{
-		"name" : "MongoDB",
-		"level": "Beginner",
-		"percentage" :"30"
-		},
-		{
-		"name" : "Github/Tortoise SVN",
-		"level": "Intermediate",
-		"percentage" :"60"
-		}
-	]
-	}
+  "data": {
+    "summary": "I have project experience in Javascript, React JS,  MSSQL Server, Angular 2/4, jQuery, CSS etc. 5 years of experiencein web development",
+    "skills": [
+      {
+        "name": "React JS",
+        "level": "Expert",
+        "percentage": "70"
+      },
+      {
+        "name": "Javascript/JQuery",
+        "level": "Expert",
+        "percentage": "60"
+      },
+      {
+        "name": "Node",
+        "level": "Intermediate",
+        "percentage": "60"
+      },
+      {
+        "name": "Angular 2/4",
+        "level": "Intermediate",
+        "percentage": "30"
+      },
+      {
+        "name": "Coldfusion",
+        "level": "Expert",
+        "percentage": "70"
+      },
+      {
+        "name": "CSS3",
+        "level": "Intermediate",
+        "percentage": "60"
+      },
+      {
+        "name": "HTML5",
+        "level": "Intermediate",
+        "percentage": "65"
+      },
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "percentage": "55"
+      },
+      {
+        "name": "MongoDB",
+        "level": "Intermediate",
+        "percentage": "50"
+      },
+      {
+        "name": "Github/Tortoise SVN",
+        "level": "Intermediate",
+        "percentage": "60"
+      }
+    ]
+  }
 }
